@@ -1,0 +1,51 @@
+---
+import { cms } from "../../lib/content";
+const pageSize = 24;
+---
+
+<section class="bg-[#f7f7f7] px-4 py-10">
+  <div id="member-grid" class="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"></div>
+  <div class="mt-8 flex items-center justify-center gap-4 text-coral">
+    <button id="member-prev" type="button" aria-label="Previous page">&lt;</button>
+    <span id="member-pages" class="flex gap-3"></span>
+    <button id="member-next" type="button" aria-label="Next page">&gt;</button>
+  </div>
+</section>
+
+<script define:vars={{ directory: cms.directory, pageSize }}>
+  const grid = document.querySelector("#member-grid");
+  const pages = document.querySelector("#member-pages");
+  let page = 0;
+  const total = Math.ceil(directory.length / pageSize);
+
+  function render() {
+    const slice = directory.slice(page * pageSize, page * pageSize + pageSize);
+    grid.innerHTML = slice
+      .map(
+        (member, index) => `
+        <a class="block border bg-white p-3 text-center shadow-sm ${page === 0 && index < 10 ? "bg-charcoal/5" : ""}" href="${member.href}">
+          <img src="${member.image || ""}" alt="" class="mx-auto h-24 w-full object-contain" />
+          <p class="mt-3 text-sm text-navy">${member.title}</p>
+          <p class="text-sm text-sky-600">Member Details</p>
+        </a>`
+      )
+      .join("");
+    pages.innerHTML = Array.from({ length: total }, (_, i) => `<button type="button" data-page="${i}" class="${i === page ? "font-bold text-navy" : ""}">${i + 1}</button>`).join("");
+  }
+
+  document.querySelector("#member-prev")?.addEventListener("click", () => {
+    page = Math.max(0, page - 1);
+    render();
+  });
+  document.querySelector("#member-next")?.addEventListener("click", () => {
+    page = Math.min(total - 1, page + 1);
+    render();
+  });
+  pages?.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLButtonElement)) return;
+    page = Number(target.dataset.page || 0);
+    render();
+  });
+  render();
+</script>

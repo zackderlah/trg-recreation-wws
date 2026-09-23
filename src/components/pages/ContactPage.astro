@@ -1,0 +1,77 @@
+---
+const people = [
+  { role: "President", name: "Jye Berghofer", phone: "0424 260 539" },
+  {
+    role: "Co Vice President",
+    note: "(All Charity Golf Day Enquiries)",
+    name: "James Williams",
+    phone: "0481 127 412"
+  },
+  { role: "Co Vice President", name: "Justin Searle", phone: "07 4688 2500" },
+  { role: "Secretary", name: "Kellie Thomas", phone: "0409 347 543" },
+  { role: "Treasurer", name: "Vicki Holmes", phone: "0448 833 550" }
+];
+---
+
+<section class="grid bg-charcoal text-white lg:grid-cols-2">
+  <div class="px-6 py-10 md:px-12">
+    <h2 class="text-3xl text-navy">Committee Contacts</h2>
+    <div class="mt-8 space-y-6">
+      {
+        people.map((person) => (
+          <article>
+            <h3 class="text-xl">{person.role}</h3>
+            {person.note && <p class="text-sm">{person.note}</p>}
+            <p class="mt-2">{person.name}</p>
+            <p>
+              Phone: <a class="text-sky-300 underline" href={`tel:${person.phone.replace(/\s/g, "")}`}>{person.phone}</a>
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+  <div class="bg-white px-6 py-10 text-navy md:px-12">
+    <h2 class="text-3xl">Email Us</h2>
+    <form id="contact-form" class="mt-6 space-y-4" novalidate>
+      <label class="block text-sm">Business Name*
+        <input class="mt-1 w-full border bg-rose-100 px-3 py-2" name="business" required placeholder="Required" />
+      </label>
+      <label class="block text-sm">What Type of Business are you in?
+        <input class="mt-1 w-full border bg-rose-100 px-3 py-2" name="type" required placeholder="Required" />
+      </label>
+      <label class="block text-sm">Name*
+        <input class="mt-1 w-full border bg-rose-100 px-3 py-2" name="name" required placeholder="Required" />
+      </label>
+      <label class="block text-sm">Contact Phone*
+        <input class="mt-1 w-full border bg-rose-100 px-3 py-2" name="phone" required placeholder="Required" />
+      </label>
+      <label class="block text-sm">Email*
+        <input class="mt-1 w-full border bg-rose-100 px-3 py-2" type="email" name="email" required placeholder="Required" />
+      </label>
+      <label class="block text-sm">Comments and Questions
+        <textarea class="mt-1 h-28 w-full border bg-rose-100 px-3 py-2" name="comments"></textarea>
+      </label>
+      <p id="contact-error" class="hidden text-sm text-red-700">Please complete all required fields</p>
+      <p id="contact-note" class="hidden text-sm leading-6">
+        This form matches the original enquiry fields. The WebWave mailbox was not published with a recipient address, so please call a committee member to reach TRG directly.
+      </p>
+      <button class="bg-sky-500 px-6 py-2 text-white" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const error = document.querySelector("#contact-error");
+    const note = document.querySelector("#contact-note");
+    if (!form.checkValidity()) {
+      error?.classList.remove("hidden");
+      return;
+    }
+    error?.classList.add("hidden");
+    note?.classList.remove("hidden");
+  });
+</script>

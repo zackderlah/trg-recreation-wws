@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutPage from "../components/pages/AboutPage.astro";
+import CommunityPage from "../components/pages/CommunityPage.astro";
+import GolfPage from "../components/pages/GolfPage.astro";
+import MembersPage from "../components/pages/MembersPage.astro";
+import NewsPage from "../components/pages/NewsPage.astro";
+import ContactPage from "../components/pages/ContactPage.astro";
+import MemberPage from "../components/pages/MemberPage.astro";
+import ArticlePage from "../components/pages/ArticlePage.astro";
+import { articleByPath, cms, memberBySlug } from "../lib/content";
+
+export function getStaticPaths() {
+  const pages = [
+    { slug: "about", kind: "about", title: "Toowoomba Referral Group | About Us", heading: "About TRG" },
+    { slug: "community", kind: "community", title: "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives", heading: "In the Community" },
+    { slug: "charitygolfday", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
+    { slug: "annual-charity-golf-day", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
+    { slug: "members", kind: "members", title: "TRG Members List", heading: "TRG Member List" },
+    { slug: "news", kind: "news", title: "Toowoomba Business Referral Group News", heading: "TRG News" },
+    { slug: "contact", kind: "contact", title: "Contact | Toowoomba Business Referral Group", heading: "Contact TRG" }
+  ];
+
+  return [
+    ...pages.map((page) => ({
+      params: { slug: page.slug },
+      props: page
+    })),
+    ...cms.members.map((member) => ({
+      params: { slug: member.slug },
+      props: {
+        slug: member.slug,
+        kind: "member",
+        title: member.title,
+        heading: ""
+      }
+    })),
+    ...cms.articles.map((article) => ({
+      params: { slug: article.path.replace(/^\//, "") },
+      props: {
+        slug: article.path.replace(/^\//, ""),
+        kind: "article",
+        title: article.title,
+        heading: ""
+      }
+    }))
+  ];
+}
+
+const { kind, title, heading, slug } = Astro.props;
+const description = cms.pages.find((page) => page.slug === slug || page.url.endsWith(`/${slug}`))?.description;
+const member = kind === "member" ? memberBySlug(slug) : undefined;
+const article = kind === "article" ? articleByPath(`/${slug}`) : undefined;
+---
+
+<BaseLayout title={title} description={description} pageTitle={heading || undefined}>
+  {kind === "about" && <AboutPage />}
+  {kind === "community" && <CommunityPage />}
+  {kind === "golf" && <GolfPage />}
+  {kind === "members" && <MembersPage />}
+  {kind === "news" && <NewsPage />}
+  {kind === "contact" && <ContactPage />}
+  {kind === "member" && member && <MemberPage member={member} />}
+  {kind === "article" && article && <ArticlePage article={article} />}
+</BaseLayout>

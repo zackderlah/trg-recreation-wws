@@ -1,0 +1,33 @@
+---
+---
+<div id="cookie-notice" class="fixed inset-0 z-50 hidden items-start justify-center bg-black/35 px-4 pt-24" hidden>
+  <div class="w-full max-w-xl rounded bg-white p-6 text-center shadow-xl" role="dialog" aria-labelledby="cookie-title">
+    <h2 id="cookie-title" class="text-2xl text-navy">Consent to cookies</h2>
+    <p class="mt-4 text-sm leading-6 text-slate-700">
+      Cookies are small data files stored on your device while browsing websites. We use them to enhance site functionality and analyse site traffic.
+    </p>
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
+      <button id="cookie-prefs" class="rounded border border-slate-300 px-4 py-2 text-sm" type="button">Cookie Preferences</button>
+      <button id="cookie-allow" class="rounded bg-navy px-4 py-2 text-sm text-white" type="button">Allow All</button>
+    </div>
+    <p id="cookie-prefs-note" class="mt-3 hidden text-sm text-slate-600">
+      This recreation stores only your choice to hide this notice. The original site analytics cookies are not loaded.
+    </p>
+  </div>
+</div>
+<script>
+  const root = document.querySelector<HTMLElement>("#cookie-notice");
+  const key = "trg-cookie-choice";
+  if (root && !localStorage.getItem(key)) {
+    root.hidden = false;
+    root.classList.remove("hidden");
+    root.classList.add("flex");
+  }
+  document.querySelector("#cookie-allow")?.addEventListener("click", () => {
+    localStorage.setItem(key, "all");
+    root?.classList.add("hidden");
+  });
+  document.querySelector("#cookie-prefs")?.addEventListener("click", () => {
+    document.querySelector("#cookie-prefs-note")?.classList.remove("hidden");
+  });
+</script>

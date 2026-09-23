@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { cms } from "../lib/content";
+
+const promotion = [
+  "At the the beginning of every meeting, each TRG member is allocated 60 seconds to promote their business.",
+  "Members are also invited and scheduled to prepare and deliver 20 minute presentations on their products and services at least twice during the calendar year.",
+  "Network with other members before, during and after the meeting to discuss ideas and exchange information and professional advice.",
+  "Participate in association sponsored activities and events."
+];
+const benefits = [
+  "Generate and receive quality business leads and referrals.",
+  "Be inspired, motivated and increase your knowledge base from our guest speakers.",
+  "Receive support and actively promote other business owners and managers.",
+  "Be equipped with business tools for self-confidence and business development.",
+  "Build confidence in the delivery of your product/service.",
+  "Be part of an environment which encourages brainstorming."
+];
+const join = [
+  "Any person who wants to increase business success by meeting with other people for the purpose of giving and receiving quality referrals.",
+  "Any person who gives without expecting something in return.",
+  "A member must have a reputation for good business ethics.",
+  "There is only one member per business category.",
+  "Each member is approved by the management committee to ensure quality of membership is maintained."
+];
+const cards = [
+  { title: "Business Promotion", icon: cms.brand.iconPromo, items: promotion },
+  { title: "Member Benefits", icon: cms.brand.iconBenefits, items: benefits },
+  { title: "Who Can Join?", icon: cms.brand.iconJoin, items: join }
+];
+---
+
+<BaseLayout
+  overlay
+  title="Business Networking | Toowoomba Referral Group"
+  description="Toowoomba Referral Group (TRG) is a business networking and referral group which focuses on building relationships and business leads within a structured and positive environment."
+>
+  <section class="relative">
+    <img
+      src={cms.brand.hero}
+      alt="Toowoomba Referral Group"
+      class="h-[280px] w-full object-cover md:h-[420px]"
+    />
+  </section>
+
+  <section class="bg-charcoal px-4 py-12 text-center text-white">
+    <h1 class="text-4xl text-navy md:text-5xl">Toowoomba Referral Group</h1>
+    <p class="mt-4 text-xl font-bold text-navy">Generate quality referrals for your business</p>
+    <p class="mt-4">Meeting at Urban Grounds Cafe<br />Wednesdays at 9am</p>
+    <button id="open-map" class="mt-6 rounded-full bg-sky px-8 py-2 text-white" type="button">View Map</button>
+  </section>
+
+  <section class="bg-coral px-4 py-12 text-center text-white">
+    <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed">
+      <p>
+        Toowoomba Referral Group (TRG) is a business networking community that builds strong relationships and generates high-quality business leads in a supportive, structured environment.
+      </p>
+      <p>
+        With a strong community spirit, TRG also raises significant funds for local charities through its popular annual charity golf event.
+      </p>
+      <p>
+        Beyond business, members enjoy a vibrant social calendar—optional events include free breakfasts, Christmas in July, Christmas Trivia, and an end-of-year Christmas Party, creating a fun, connected, and engaged group culture.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2">
+    <div class="text-center">
+      <img src={cms.brand.raffle} alt="Win 5000 cash in the TRG Golf Day Raffle" class="mx-auto w-full max-w-xl" />
+      <img src={cms.brand.qr} alt="Raffle ticket QR code" class="mx-auto mt-4 h-28 w-28" />
+    </div>
+    <div>
+      <h2 class="text-3xl text-navy">TRG 2026 Charity Golf Day Major Prize</h2>
+      <p class="mt-4 leading-relaxed">
+        The Toowoomba Referral Group is hosting its charity golf day again in November 2026. Participants will have the chance to win a major cash prize of $5,000. Join us for a day of golf and support a good cause. Tickets are only $10 each and can be purchased online.
+      </p>
+      <a class="btn-coral mt-6" href="https://www.raffletix.com.au/?ref=3dv5w&sref=9dxr33fa" target="_blank" rel="noreferrer">
+        Buy Your Tickets Here
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-3">
+    {
+      cards.map((card) => (
+        <article class="border border-slate-300 px-5 py-8 text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy">
+            <img src={card.icon} alt="" class="h-8 w-8" />
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-navy">{card.title}</h3>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-left text-sm leading-6">
+            {card.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </section>
+
+  <dialog id="map-dialog" class="w-[min(100%,960px)] p-0">
+    <div class="flex items-center justify-between bg-charcoal px-4 py-3 text-white">
+      <h2 class="text-lg">Urban Grounds Cafe</h2>
+      <button id="close-map" class="px-2 text-xl" type="button" aria-label="Close map">×</button>
+    </div>
+    <iframe
+      title="Map of 20 Herries Street, Toowoomba"
+      class="h-[420px] w-full"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=20%20Herries%20Street%20Toowoomba&z=15&output=embed"
+    ></iframe>
+  </dialog>
+</BaseLayout>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>("#map-dialog");
+  document.querySelector("#open-map")?.addEventListener("click", () => dialog?.showModal());
+  document.querySelector("#close-map")?.addEventListener("click", () => dialog?.close());
+</script>

@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CookieNotice from "../components/CookieNotice.astro";
+import { cms } from "../lib/content";
+
+interface Props {
+  title: string;
+  description?: string;
+  pageTitle?: string;
+  overlay?: boolean;
+}
+
+const { title, description, pageTitle, overlay = false } = Astro.props;
+const current = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description || "Toowoomba Referral Group is a business networking community."} />
+    <link rel="icon" href={cms.brand.favicon || "/favicon.ico"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class:list={[overlay && "absolute inset-x-0 top-0 z-30"]}>
+      <Header overlay={overlay} current={current} />
+      {
+        pageTitle && (
+          <div class="bg-charcoal px-4 pb-8 pt-2 text-center">
+            <h1 class="text-4xl text-navy md:text-5xl">{pageTitle}</h1>
+          </div>
+        )
+      }
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <CookieNotice />
+  </body>
+</html>

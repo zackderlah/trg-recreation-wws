@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Roboto Slab", Georgia, serif;
+  --font-display: "Alfa Slab One", "Arial Black", serif;
+  --color-navy: #1d3557;
+  --color-coral: #ff6b6b;
+  --color-charcoal: #595959;
+  --color-ink: #243042;
+  --color-sky: #4ca1d9;
+  --color-slatebar: #595959;
+  --color-titlebar: #404c54;
+  --color-ice: #b7d9f0;
+  --color-blush: #f9bebe;
+  --color-field: #594444;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #fff;
+}
+
+h1, h2, .display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: #d7e6f5;
+}
+
+.btn-coral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-coral);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.btn-coral:hover {
+  background: #ff5252;
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-navy);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+.prose-copy p,
+.prose-copy li {
+  margin-bottom: 0.9rem;
+  line-height: 1.55;
+}
+
+.prose-copy h3,
+.prose-copy h4 {
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  font-weight: 700;
+  margin: 1.1rem 0 0.4rem;
+}

@@ -1,0 +1,104 @@
+---
+import { cms } from "../../lib/content";
+
+const banner = cms.golfImages.find((image) => image.src.includes("golf-day-page-banner"));
+const hope = cms.golfImages.find((image) => image.src.toLowerCase().includes("hope"));
+const maddox = cms.golfImages.find((image) => image.src.toLowerCase().includes("maddox"));
+const blush = cms.golfImages.find((image) => image.src.toLowerCase().includes("blush"));
+const veterans = cms.golfImages.find((image) => image.src.includes("young-veterans"));
+const gallery2025 = cms.golfImages.filter((image) => image.src.includes("IMG_"));
+const gallery2024 = cms.golfImages.filter((image) => image.src.includes("2024-TRG"));
+const tickets = "https://www.raffletix.com.au/?ref=3dv5w&sref=9dxr33fa";
+const register = cms.golfLinks.find((link) => link.text === "Register Your Interest")?.href || "/contact";
+---
+
+{banner && <img src={banner.src} alt="TRG Annual Charity Golf Day" class="h-56 w-full object-cover md:h-72" />}
+
+<section class="bg-charcoal px-4 py-8 text-center text-white">
+  <p class="mx-auto max-w-4xl leading-relaxed">
+    The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities. Held at the Toowoomba Golf Club, local businesses, sponsors, and players come together for a round of golf, good food, and great company.
+  </p>
+</section>
+
+<section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 md:grid-cols-2">
+  <img src={cms.brand.raffle} alt="Win $5000 cash in the TRG Golf Day raffle" />
+  <div>
+    <h2 class="text-3xl text-navy">TRG 2026 Charity Golf Day Major Prize</h2>
+    <p class="mt-4">
+      The Toowoomba Referral Group is hosting its charity golf day again in November 2026. Participants will have the chance to win a major cash prize of $5,000. Tickets are only $10 each.
+    </p>
+    <a class="btn-coral mt-5" href={tickets} target="_blank" rel="noreferrer">Buy Your Tickets Here</a>
+  </div>
+</section>
+
+<section class="mx-auto max-w-3xl px-4 py-6 text-center">
+  <a class="btn-coral" href={register} target="_blank" rel="noreferrer">Register Your Interest</a>
+  <div class="mt-8 border border-slate-200 p-6">
+    <h2 class="text-3xl text-navy">2026 Golf Day</h2>
+    <p class="mt-3 font-bold">Friday 27th November</p>
+    <p class="mt-2">TOOWOOMBA GOLF CLUB<br />235-323 Rowbotham St, Middle Ridge</p>
+    <p class="mt-2">Registration 8:00am<br />Tee Off 9:00am</p>
+  </div>
+</section>
+
+<section class="mx-auto max-w-5xl px-4 py-10">
+  <h2 class="text-center text-3xl text-navy">2026 Charities</h2>
+  <div class="mt-8 grid gap-6 md:grid-cols-2">
+    <article class="border border-slate-200 p-6 text-center">
+      {hope && <img src={hope.src} alt="Hope Horizons" class="mx-auto h-24 object-contain" />}
+      <p class="mt-4 text-sm leading-6">
+        Hope Horizons Cancer Wellness Centre opened its doors in Toowoomba, Southeast Queensland in 2017. Born from a desire to see free allied health services provided for those living with cancer in the region, while ever cancer remains, our mission is to diminish its impact.
+      </p>
+      <a class="btn-coral mt-4" href="https://www.hopehorizons.com.au/" target="_blank" rel="noreferrer">Learn More</a>
+    </article>
+    <article class="border border-slate-200 p-6 text-center">
+      {maddox && <img src={maddox.src} alt="Maddox's Helping Hand" class="mx-auto h-24 object-contain" />}
+      <p class="mt-4 text-sm leading-6">
+        Maddox's Helping Hand Foundation (MHHF) was established in 2020 and supports ACCISS where the public hospital system cannot. In May 2021 MHHF held its first fundraising event and has since raised almost $700,000.
+      </p>
+      <a class="btn-coral mt-4" href="https://maddoxshelpinghandfoundation.com.au/" target="_blank" rel="noreferrer">Learn More</a>
+    </article>
+  </div>
+</section>
+
+<section class="bg-[#d9ecf7] px-4 py-10">
+  <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+    <div>
+      <h2 class="text-2xl text-navy">2026 Sponsors</h2>
+      <h3 class="mt-4 font-bold">Hole Sponsors</h3>
+      <ul class="mt-2 list-disc pl-5 text-sm leading-7">
+        <li>HC Pure</li>
+        <li>Major and minor sponsorship packages</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold">Other Sponsors</h3>
+      <ul class="mt-2 list-disc pl-5 text-sm leading-7">
+        <li>Ashley North – Colliers Toowoomba</li>
+        <li>Westside Timbers</li>
+        <li>JLL</li>
+        <li>Precinct Urban Planning</li>
+        <li>Working Websites</li>
+        <li>Sunpork</li>
+        <li>Ground Me Coffee</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-5xl px-4 py-10">
+  <h2 class="text-center text-3xl text-navy">Past Charities</h2>
+  <div class="mt-6 flex flex-wrap items-center justify-center gap-10">
+    {blush && <img src={blush.src} alt="Blush Cancer Care" class="h-20 object-contain" />}
+    {veterans && <img src={veterans.src} alt="Young Veterans" class="h-20 object-contain" />}
+  </div>
+  <h2 class="mt-10 text-center text-3xl text-navy">Golf Day Galleries</h2>
+  <h3 class="mt-6 text-center text-xl font-bold">2025</h3>
+  <div class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+    {gallery2025.map((image) => <img src={image.src} alt="TRG Charity Golf Day 2025" class="h-36 w-full object-cover" />)}
+  </div>
+  <h3 class="mt-8 text-center text-xl font-bold">2024</h3>
+  <div class="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+    {gallery2024.map((image) => <img src={image.src} alt="TRG Charity Golf Day 2024" class="h-36 w-full object-cover" />)}
+  </div>
+</section>

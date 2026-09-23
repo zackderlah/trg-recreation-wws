@@ -1,0 +1,73 @@
+---
+import type { Member } from "../../lib/content";
+import { directoryTitle } from "../../lib/content";
+
+interface Props {
+  member: Member;
+}
+const { member } = Astro.props;
+const business = directoryTitle(member.slug) || member.business;
+const portrait = member.images[0];
+const logo = member.images[1];
+const contactLines = member.address.filter((line) => {
+  const value = line.toLowerCase();
+  return !member.phones.some((phone) => phone.label.toLowerCase() === value)
+    && !member.emails.some((email) => email.label.toLowerCase() === value)
+    && !member.extras.some((extra) => extra.text.toLowerCase() === value);
+});
+---
+
+<section class="bg-charcoal px-4 py-10 text-navy">
+  <div class="mx-auto flex max-w-5xl flex-col gap-6 md:flex-row md:items-center">
+    {
+      portrait && (
+        <img
+          src={portrait.src}
+          alt={portrait.alt || member.person}
+          class="h-52 w-44 border-4 border-navy object-cover"
+        />
+      )
+    }
+    <div>
+      {member.person && <p class="text-2xl font-bold">{member.person}</p>}
+      <h2 class="text-4xl">{business}</h2>
+      {member.category && <p class="mt-2 text-xl">{member.category}</p>}
+    </div>
+  </div>
+</section>
+
+<article class="prose-copy mx-auto max-w-3xl px-4 py-10">
+  {member.intro && <p class="text-lg">{member.intro}</p>}
+  {
+    member.body
+      .filter((block) => !/^MembersADA/i.test(block.text) && !/Consent to cookies/i.test(block.text))
+      .map((block) => {
+      if (block.tag === "li") return <li class="ml-5 list-disc">{block.text}</li>;
+      if (block.tag === "h3" || block.tag === "h4") return <h3>{block.text}</h3>;
+      return <p>{block.text}</p>;
+    })
+  }
+</article>
+
+<section class="mx-auto grid max-w-4xl gap-8 px-4 py-8 md:grid-cols-2">
+  <div>
+    <h2 class="text-3xl text-navy">Contact Details</h2>
+    {logo && <img src={logo.src} alt={`${business} logo`} class="mt-6 max-h-24 object-contain" />}
+    <div class="mt-4 space-y-1 text-sky-700">
+      {member.phones.map((phone) => <p><a href={phone.href}>{phone.label}</a></p>)}
+      {member.emails.map((email) => <p><a href={email.href}>{email.label}</a></p>)}
+      {
+        member.extras.map((extra) => (
+          <p>
+            <a href={extra.href} target={extra.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+              {extra.text}
+            </a>
+          </p>
+        ))
+      }
+    </div>
+  </div>
+  <address class="pt-12 not-italic leading-7">
+    {contactLines.map((line) => <p>{line}</p>)}
+  </address>
+</section>

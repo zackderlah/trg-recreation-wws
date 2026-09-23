@@ -1,0 +1,55 @@
+---
+import { cms } from "../../lib/content";
+
+const photos = cms.aboutImages.filter((image) => image.alt);
+const committee = [
+  { name: "Jye Berghofer", role: "President", org: "DP Wealth Advisory", image: photos[0] },
+  { name: "Justin Searle", role: "Vice President", org: "Clear Vision Accountancy", image: photos[1] },
+  { name: "James Williams", role: "Events Co-Ordinator", org: "Precinct Urban Planning", image: photos[2] },
+  { name: "Vicki Holmes", role: "Treasurer", org: "Darling Downs Bookkeeping Company", image: photos[3] },
+  { name: "Kellie Thomas", role: "Secretary", org: "Regional Insurance", image: photos[4] }
+];
+const hero = cms.brand.aboutHero;
+---
+
+<img src={hero} alt="About TRG Business Networking" class="h-56 w-full object-cover md:h-72" />
+
+<section class="mx-auto grid max-w-5xl gap-10 px-4 py-12 md:grid-cols-2">
+  <div>
+    <h2 class="text-2xl text-navy">What We Do</h2>
+    <p class="mt-4 leading-relaxed">
+      Toowoomba Referral Group is a business referral group which focuses on providing business networking and business leads within a structured and positive environment.
+    </p>
+    <a class="btn-coral mt-6" href="/contact">Contact Us</a>
+  </div>
+  <div>
+    <h2 class="text-2xl text-navy">What's Involved?</h2>
+    <p class="mt-4 leading-relaxed">
+      TRG is a registered Not for Profit Incorporated Association (IA55093) that organises business networking meetings every Wednesday from 9am to 10am for members and invited guests.
+    </p>
+    <p class="mt-4 leading-relaxed">
+      Each member is given the opportunity to promote their business. Guest and motivational speakers from a range of professions are regularly organised to present to the group.
+    </p>
+  </div>
+</section>
+
+<section class="bg-[#eef6fb] px-4 py-12">
+  <h2 class="text-center text-3xl text-coral">Meet Our 2026 Committee</h2>
+  <div class="mx-auto mt-10 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      committee.map((person) => (
+        <article class="text-center">
+          <div class="bg-slate-200">
+            <div class="h-2 bg-coral"></div>
+            {person.image && (
+              <img src={person.image.src} alt={person.image.alt || person.name} class="mx-auto h-52 w-full object-cover object-top" />
+            )}
+          </div>
+          <h3 class="mt-3 text-lg font-bold text-navy">{person.name}</h3>
+          <p class="text-sm">{person.role}</p>
+          <p class="text-sm">{person.org}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
