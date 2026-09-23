@@ -12,9 +12,14 @@ const committee = [
 const hero = cms.brand.aboutHero;
 ---
 
-<img src={hero} alt="About TRG Business Networking" class="h-56 w-full object-cover md:h-72" />
+<img src={hero} alt="About TRG Business Networking" class="h-72 w-full object-cover md:h-[420px]" />
 
-<section class="mx-auto grid max-w-5xl gap-10 px-4 py-12 md:grid-cols-2">
+<section class="bg-titlebar px-4 py-10 text-center">
+  <h1 class="text-4xl text-navy md:text-5xl">About TRG</h1>
+</section>
+
+<section class="bg-[#6d6d6d] px-4 py-12 text-[#102033]">
+  <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
   <div>
     <h2 class="text-2xl text-navy">What We Do</h2>
     <p class="mt-4 leading-relaxed">
@@ -30,6 +35,7 @@ const hero = cms.brand.aboutHero;
     <p class="mt-4 leading-relaxed">
       Each member is given the opportunity to promote their business. Guest and motivational speakers from a range of professions are regularly organised to present to the group.
     </p>
+    </div>
   </div>
 </section>
 

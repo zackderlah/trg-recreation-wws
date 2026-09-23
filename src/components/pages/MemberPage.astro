@@ -36,7 +36,8 @@ const contactLines = member.address.filter((line) => {
   </div>
 </section>
 
-<article class="prose-copy mx-auto max-w-3xl px-4 py-10">
+<article class="prose-copy bg-charcoal px-4 pb-12 text-[#102033]">
+  <div class="mx-auto max-w-3xl">
   {member.intro && <p class="text-lg">{member.intro}</p>}
   {
     member.body
@@ -47,6 +48,7 @@ const contactLines = member.address.filter((line) => {
       return <p>{block.text}</p>;
     })
   }
+  </div>
 </article>
 
 <section class="mx-auto grid max-w-4xl gap-8 px-4 py-8 md:grid-cols-2">
@@ -68,6 +70,6 @@ const contactLines = member.address.filter((line) => {
     </div>
   </div>
   <address class="pt-12 not-italic leading-7">
-    {contactLines.map((line) => <p>{line}</p>)}
+    {contactLines.slice().reverse().map((line) => <p>{line}</p>)}
   </address>
 </section>

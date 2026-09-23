@@ -50,7 +50,7 @@ const cards = [
     <button id="open-map" class="mt-6 rounded-full bg-sky px-8 py-2 text-white" type="button">View Map</button>
   </section>
 
-  <section class="bg-coral px-4 py-12 text-center text-white">
+  <section class="bg-coral px-4 py-12 text-center text-navy">
     <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed">
       <p>
         Toowoomba Referral Group (TRG) is a business networking community that builds strong relationships and generates high-quality business leads in a supportive, structured environment.
@@ -65,9 +65,9 @@ const cards = [
   </section>
 
   <section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2">
-    <div class="text-center">
-      <img src={cms.brand.raffle} alt="Win 5000 cash in the TRG Golf Day Raffle" class="mx-auto w-full max-w-xl" />
-      <img src={cms.brand.qr} alt="Raffle ticket QR code" class="mx-auto mt-4 h-28 w-28" />
+    <div class="relative mx-auto w-full max-w-xl">
+      <img src={cms.brand.raffle} alt="Win 5000 cash in the TRG Golf Day Raffle" class="w-full" />
+      <img src={cms.brand.qr} alt="Raffle ticket QR code" class="absolute bottom-1 left-3 h-16 w-16 bg-white" />
     </div>
     <div>
       <h2 class="text-3xl text-navy">TRG 2026 Charity Golf Day Major Prize</h2>

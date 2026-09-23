@@ -15,9 +15,11 @@ const register = cms.golfLinks.find((link) => link.text === "Register Your Inter
 {banner && <img src={banner.src} alt="TRG Annual Charity Golf Day" class="h-56 w-full object-cover md:h-72" />}
 
 <section class="bg-charcoal px-4 py-8 text-center text-white">
-  <p class="mx-auto max-w-4xl leading-relaxed">
-    The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities. Held at the Toowoomba Golf Club, local businesses, sponsors, and players come together for a round of golf, good food, and great company.
-  </p>
+  <div class="mx-auto max-w-4xl space-y-4 leading-relaxed">
+    <p>The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities.</p>
+    <p>Held at the picturesque Toowoomba Golf Club, it’s a day where local businesses, sponsors, and players come together for a round of golf, good food, and great company — all for a worthy cause.</p>
+    <p>With team registrations, hole sponsorships, and prizes throughout the day, the eventblends friendly competition with genuine community spirit, helping make adifference for local families affected by cancer and serious injury.</p>
+  </div>
 </section>
 
 <section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 md:grid-cols-2">
@@ -32,7 +34,17 @@ const register = cms.golfLinks.find((link) => link.text === "Register Your Inter
 </section>
 
 <section class="mx-auto max-w-3xl px-4 py-6 text-center">
-  <a class="btn-coral" href={register} target="_blank" rel="noreferrer">Register Your Interest</a>
+  <div class="border border-slate-200 p-6">
+    <h2 class="text-3xl text-navy">Sponsorships and Donations</h2>
+    <ul class="mt-4 space-y-1 text-sm leading-7">
+      <li>Hole in One Sponsor</li>
+      <li>Minor Sponsorship (Donation)</li>
+      <li>Major Sponsorship (Donation)</li>
+      <li>Raffle/Auction Prize (Donation)</li>
+      <li>All other sponsorship opportunities are currently exhausted</li>
+    </ul>
+    <a class="btn-coral mt-5" href={register} target="_blank" rel="noreferrer">Register Your Interest</a>
+  </div>
   <div class="mt-8 border border-slate-200 p-6">
     <h2 class="text-3xl text-navy">2026 Golf Day</h2>
     <p class="mt-3 font-bold">Friday 27th November</p>
@@ -61,24 +73,45 @@ const register = cms.golfLinks.find((link) => link.text === "Register Your Inter
   </div>
 </section>
 
-<section class="bg-[#d9ecf7] px-4 py-10">
-  <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-    <div>
-      <h2 class="text-2xl text-navy">2026 Sponsors</h2>
-      <h3 class="mt-4 font-bold">Hole Sponsors</h3>
-      <ul class="mt-2 list-disc pl-5 text-sm leading-7">
-        <li>HC Pure</li>
-        <li>Major and minor sponsorship packages</li>
+<section class="px-4 py-10">
+  <h2 class="text-center text-3xl text-navy">2026 Sponsors</h2>
+  <div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-3">
+    <div class="bg-ice px-4 py-8 text-center text-navy">
+      <h3 class="text-xl font-bold">Major Sponsors</h3>
+      <ul class="mt-4 space-y-1 text-sm">
+        <li>Tilly’s</li>
+        <li>H &amp; H Catering</li>
+        <li>Southern Cross Austereo</li>
       </ul>
     </div>
-    <div>
-      <h3 class="font-bold">Other Sponsors</h3>
-      <ul class="mt-2 list-disc pl-5 text-sm leading-7">
+    <div class="bg-coral px-4 py-8 text-center text-white">
+      <h3 class="text-xl font-bold">Hole Sponsors</h3>
+      <ul class="mt-4 space-y-1 text-sm">
+        <li>HC Pure</li>
+        <li>Clearvision Accountancy</li>
+        <li>Andersons Toowoomba</li>
+        <li>Ada Financial</li>
+        <li>Cornerstone Risk Group</li>
+        <li>Liebke Tyres</li>
+        <li>Alliance Building &amp; Construction</li>
+        <li>Sunrise Surveying</li>
+        <li>LJ Hooker Toowoomba</li>
+        <li>The Gentleman’s Barber</li>
+        <li>X Golf Toowoomba</li>
+        <li>WD Building Design</li>
+        <li>Australian Ecological Restoration Services</li>
+        <li>Clearspan Building Solutions</li>
+        <li>Toowoomba Body Corporate Managers &amp; Consultants</li>
+        <li>Blackbird Projects</li>
+        <li>Superior Plumbing &amp; Civil</li>
+      </ul>
+    </div>
+    <div class="bg-ice px-4 py-8 text-center text-navy">
+      <h3 class="text-xl font-bold">Other Sponsors</h3>
+      <ul class="mt-4 space-y-1 text-sm">
         <li>Ashley North – Colliers Toowoomba</li>
         <li>Westside Timbers</li>
         <li>JLL</li>
-        <li>Precinct Urban Planning</li>
-        <li>Working Websites</li>
         <li>Sunpork</li>
         <li>Ground Me Coffee</li>
       </ul>

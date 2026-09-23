@@ -1,7 +1,7 @@
 ---
 ---
-<div id="cookie-notice" class="fixed inset-0 z-50 hidden items-start justify-center bg-black/35 px-4 pt-24" hidden>
-  <div class="w-full max-w-xl rounded bg-white p-6 text-center shadow-xl" role="dialog" aria-labelledby="cookie-title">
+<div id="cookie-notice" class="fixed inset-0 z-50 hidden items-start justify-center bg-black/20 px-4 pt-28" hidden>
+  <div class="w-full max-w-lg rounded bg-white p-5 text-center shadow-xl" role="dialog" aria-labelledby="cookie-title">
     <h2 id="cookie-title" class="text-2xl text-navy">Consent to cookies</h2>
     <p class="mt-4 text-sm leading-6 text-slate-700">
       Cookies are small data files stored on your device while browsing websites. We use them to enhance site functionality and analyse site traffic.
@@ -25,7 +25,10 @@
   }
   document.querySelector("#cookie-allow")?.addEventListener("click", () => {
     localStorage.setItem(key, "all");
-    root?.classList.add("hidden");
+    if (!root) return;
+    root.hidden = true;
+    root.classList.add("hidden");
+    root.classList.remove("flex");
   });
   document.querySelector("#cookie-prefs")?.addEventListener("click", () => {
     document.querySelector("#cookie-prefs-note")?.classList.remove("hidden");

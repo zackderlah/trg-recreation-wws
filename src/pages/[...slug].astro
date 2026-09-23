@@ -12,8 +12,8 @@ import { articleByPath, cms, memberBySlug } from "../lib/content";
 
 export function getStaticPaths() {
   const pages = [
-    { slug: "about", kind: "about", title: "Toowoomba Referral Group | About Us", heading: "About TRG" },
-    { slug: "community", kind: "community", title: "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives", heading: "In the Community" },
+    { slug: "about", kind: "about", title: "Toowoomba Referral Group | About Us", heading: "", overlay: true },
+    { slug: "community", kind: "community", title: "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives", heading: "", overlay: true },
     { slug: "charitygolfday", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
     { slug: "annual-charity-golf-day", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
     { slug: "members", kind: "members", title: "TRG Members List", heading: "TRG Member List" },
@@ -47,13 +47,13 @@ export function getStaticPaths() {
   ];
 }
 
-const { kind, title, heading, slug } = Astro.props;
+const { kind, title, heading, slug, overlay } = Astro.props;
 const description = cms.pages.find((page) => page.slug === slug || page.url.endsWith(`/${slug}`))?.description;
 const member = kind === "member" ? memberBySlug(slug) : undefined;
 const article = kind === "article" ? articleByPath(`/${slug}`) : undefined;
 ---
 
-<BaseLayout title={title} description={description} pageTitle={heading || undefined}>
+<BaseLayout title={title} description={description} pageTitle={heading || undefined} overlay={overlay}>
   {kind === "about" && <AboutPage />}
   {kind === "community" && <CommunityPage />}
   {kind === "golf" && <GolfPage />}

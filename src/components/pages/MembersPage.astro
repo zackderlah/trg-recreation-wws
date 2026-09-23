@@ -3,8 +3,13 @@ import { cms } from "../../lib/content";
 const pageSize = 24;
 ---
 
-<section class="bg-[#f7f7f7] px-4 py-10">
-  <div id="member-grid" class="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"></div>
+<section>
+  <div id="member-band" class="bg-charcoal px-4 pb-8 pt-2">
+    <div id="member-top" class="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"></div>
+  </div>
+  <div class="bg-white px-4 py-8">
+    <div id="member-rest" class="mx-auto grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"></div>
+  </div>
   <div class="mt-8 flex items-center justify-center gap-4 text-coral">
     <button id="member-prev" type="button" aria-label="Previous page">&lt;</button>
     <span id="member-pages" class="flex gap-3"></span>
@@ -13,23 +18,30 @@ const pageSize = 24;
 </section>
 
 <script define:vars={{ directory: cms.directory, pageSize }}>
-  const grid = document.querySelector("#member-grid");
+  const top = document.querySelector("#member-top");
+  const rest = document.querySelector("#member-rest");
+  const band = document.querySelector("#member-band");
   const pages = document.querySelector("#member-pages");
   let page = 0;
   const total = Math.ceil(directory.length / pageSize);
 
+  function card(member, onCharcoal) {
+    const text = onCharcoal ? "text-white" : "text-navy";
+    const shell = onCharcoal ? "bg-charcoal text-white" : "border bg-white text-navy shadow-sm";
+    return `
+      <a class="block p-3 text-center ${shell}" href="${member.href}">
+        <img src="${member.image || ""}" alt="" class="mx-auto h-24 w-full object-contain" />
+        <p class="mt-3 text-sm ${text}">${member.title}</p>
+        <p class="text-sm text-sky-400">Member Details</p>
+      </a>`;
+  }
+
   function render() {
     const slice = directory.slice(page * pageSize, page * pageSize + pageSize);
-    grid.innerHTML = slice
-      .map(
-        (member, index) => `
-        <a class="block border bg-white p-3 text-center shadow-sm ${page === 0 && index < 10 ? "bg-charcoal/5" : ""}" href="${member.href}">
-          <img src="${member.image || ""}" alt="" class="mx-auto h-24 w-full object-contain" />
-          <p class="mt-3 text-sm text-navy">${member.title}</p>
-          <p class="text-sm text-sky-600">Member Details</p>
-        </a>`
-      )
-      .join("");
+    const split = page === 0 ? 10 : 0;
+    if (band) band.classList.toggle("hidden", split === 0);
+    top.innerHTML = slice.slice(0, split).map((member) => card(member, true)).join("");
+    rest.innerHTML = slice.slice(split).map((member) => card(member, false)).join("");
     pages.innerHTML = Array.from({ length: total }, (_, i) => `<button type="button" data-page="${i}" class="${i === page ? "font-bold text-navy" : ""}">${i + 1}</button>`).join("");
   }
 

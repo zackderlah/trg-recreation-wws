@@ -3,7 +3,11 @@ import { cms } from "../../lib/content";
 const hero = cms.communityImages.find((image) => image.alt)?.src || cms.communityImages[0]?.src;
 ---
 
-<img src={hero} alt="TRG supports local community and charity events" class="h-64 w-full object-cover md:h-80" />
+<img src={hero} alt="TRG supports local community and charity events" class="h-72 w-full object-cover md:h-[420px]" />
+
+<section class="bg-titlebar px-4 py-10 text-center">
+  <h1 class="text-4xl text-navy md:text-5xl">In the Community</h1>
+</section>
 
 <section class="bg-charcoal px-4 py-10 text-white">
   <div class="mx-auto max-w-5xl">
