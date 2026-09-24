@@ -1,14 +1,28 @@
 ---
+import { site } from "../lib/cms";
 ---
 <footer class="bg-navy px-4 py-10 text-center text-white">
-  <h2 class="text-lg">Toowoomba Referral Group</h2>
+  <h2 class="text-lg">{site.name}</h2>
   <p class="mt-3 text-sm leading-6">
     IA55093<br />
     ABN 45 803 702 579<br />
     Queensland 4350
   </p>
+  {site.phone && (
+    <p class="mt-3 text-sm">
+      Phone: <a class="underline" href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
+    </p>
+  )}
+  <nav class="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm" aria-label="Footer">
+    {site.footerNav.map((item) => (
+      <a class="underline" href={item.href}>{item.label}</a>
+    ))}
+  </nav>
   <p class="mt-8 text-sm">
     Designed by <a class="underline" href="https://www.workingwebsites.net.au">Working Websites</a>
     Powered by <a class="underline" href="https://webwave.com.au">WebWave</a>
+  </p>
+  <p class="mt-4 text-xs leading-5 text-white/80">
+    Cookies are small data files stored on your device while browsing websites. We use them to enhance site functionality and analyse site traffic.
   </p>
 </footer>

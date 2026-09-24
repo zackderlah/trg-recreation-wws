@@ -1,21 +1,13 @@
 ---
-import { cms } from "../lib/content";
+import { site } from "../lib/cms";
 
 interface Props {
   overlay?: boolean;
   current: string;
 }
 
-const { overlay = false, current } = Astro.props;
-const items = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/community", label: "In The Community" },
-  { href: "/charitygolfday", label: "Charity Golf Day" },
-  { href: "/members", label: "Members" },
-  { href: "/news", label: "News" },
-  { href: "/contact", label: "Contact" }
-];
+const { current } = Astro.props;
+const items = site.nav;
 
 function currentOf(href: string) {
   if (href === "/") return current === "/" ? "page" : undefined;
@@ -25,35 +17,23 @@ function currentOf(href: string) {
 
 <div class="grid min-h-[72px] grid-cols-[auto_1fr_auto] items-center gap-4 bg-white px-4 py-2 md:min-h-[100px] md:px-8">
   <a href="/" class="shrink-0">
-    <img src={cms.brand.logo} alt="Toowoomba Business Referral Group Logo" class="h-14 w-auto md:h-16" />
+    <img src={site.logo} alt="Toowoomba Business Referral Group Logo" class="h-14 w-auto object-contain md:h-16" />
   </a>
 
-  <button
-    id="menu-toggle"
-    class="col-start-3 inline-flex h-11 w-11 items-center justify-center rounded md:hidden"
-    aria-expanded="false"
-    aria-controls="site-nav"
-  >
-    <span class="sr-only">Open menu</span>
-    <svg viewBox="0 0 12 14" class="h-6 w-6 fill-navy" aria-hidden="true">
-      <path d="M12 10.5v1q0 .2-.15.35T11.5 12h-11q-.2 0-.35-.15T0 11.5v-1q0-.2.15-.35T.5 10h11q.2 0 .35.15t.15.35zM12 6.5v1q0 .2-.15.35T11.5 8h-11q-.2 0-.35-.15T0 7.5v-1q0-.2.15-.35T.5 6h11q.2 0 .35.15t.15.35zM12 2.5v1q0 .2-.15.35T11.5 4h-11q-.2 0-.35-.15T0 3.5v-1q0-.2.15-.35T.5 2h11q.2 0 .35.15t.15.35z"></path>
-    </svg>
-  </button>
-
-  <nav id="site-nav" class="col-start-2 hidden items-center justify-center gap-5 md:flex" aria-label="Primary">
+  <nav id="site-nav" class="col-start-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-1" aria-label="Primary">
     {
       items.map((item) =>
         item.href === "/members" ? (
           <div class="group relative">
-            <a class="nav-link" href="/members" aria-current={currentOf("/members")}>
-              Members
+            <a class="nav-link" href={item.href} aria-current={currentOf(item.href)}>
+              {item.label}
             </a>
             <div class="invisible absolute left-1/2 top-full z-40 w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               <ul class="max-h-[70vh] overflow-auto rounded bg-white py-2 text-navy shadow-lg">
-                {cms.directory.map((member) => (
+                {(item.children || []).map((member) => (
                   <li>
                     <a class="block px-4 py-1.5 text-sm hover:bg-slate-100" href={member.href}>
-                      {member.title}
+                      {member.label}
                     </a>
                   </li>
                 ))}
@@ -67,10 +47,11 @@ function currentOf(href: string) {
         )
       )
     }
+    <a class="nav-link" href={site.facebook} target="_blank" rel="noreferrer">Facebook</a>
   </nav>
   <a
-    href="https://www.facebook.com/toowoombareferralgroup/"
-    class="col-start-3 hidden h-10 w-10 items-center justify-center rounded-sm bg-[#1877f2] md:inline-flex"
+    href={site.facebook}
+    class="col-start-3 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#1877f2]"
     aria-label="TRG Facebook"
     target="_blank"
     rel="noreferrer"
@@ -80,45 +61,3 @@ function currentOf(href: string) {
     </svg>
   </a>
 </div>
-
-<div id="mobile-panel" class="hidden border-b border-sky/40 bg-white px-4 pb-4 md:hidden">
-  <nav aria-label="Mobile">
-    <ul class="space-y-1 text-navy">
-      {
-        items.map((item) => (
-          <li>
-            <a class="block py-2" href={item.href} aria-current={currentOf(item.href)}>
-              {item.label}
-            </a>
-          </li>
-        ))
-      }
-      <li>
-        <a class="block py-2" href="https://www.facebook.com/toowoombareferralgroup/" target="_blank" rel="noreferrer">Facebook</a>
-      </li>
-    </ul>
-    <details class="mt-2 text-navy">
-      <summary class="cursor-pointer py-2">Member businesses</summary>
-      <ul class="max-h-64 overflow-auto pl-3">
-        {
-          cms.directory.map((member) => (
-            <li>
-              <a class="block py-1 text-sm" href={member.href}>
-                {member.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </details>
-  </nav>
-</div>
-
-<script>
-  const toggle = document.querySelector("#menu-toggle");
-  const panel = document.querySelector("#mobile-panel");
-  toggle?.addEventListener("click", () => {
-    const open = panel?.classList.toggle("hidden") === false;
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-</script>

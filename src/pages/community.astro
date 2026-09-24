@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HomePage from "../components/pages/HomePage.astro";
+import CommunityPage from "../components/pages/CommunityPage.astro";
 import { pages } from "../lib/cms";
 
-const page = pages["/"];
+const page = pages["/community"];
 ---
 
 <BaseLayout title={page.seo.title} description={page.seo.description}>
-  <HomePage page={page} />
+  <CommunityPage page={page} />
 </BaseLayout>

@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CookieNotice from "../components/CookieNotice.astro";
 import Lightbox from "../components/Lightbox.astro";
-import { cms } from "../lib/content";
+import { site } from "../lib/cms";
 
 interface Props {
   title: string;
@@ -13,7 +13,7 @@ interface Props {
   overlay?: boolean;
 }
 
-const { title, description, pageTitle, overlay = false } = Astro.props;
+const { title, description, pageTitle } = Astro.props;
 const current = Astro.url.pathname;
 const accentTitle = (pageTitle || "")
   .replaceAll("TRG", 'T<span class="text-coral">R</span>G')
@@ -27,7 +27,7 @@ const accentTitle = (pageTitle || "")
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description || "Toowoomba Referral Group is a business networking community."} />
-    <link rel="icon" href={cms.brand.favicon || "/favicon.ico"} />
+    <link rel="icon" href={site.favicon || "/favicon.ico"} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,8 +37,8 @@ const accentTitle = (pageTitle || "")
     <title>{title}</title>
   </head>
   <body>
-    <header class:list={[overlay && "absolute inset-x-0 top-0 z-30"]}>
-      <Header overlay={overlay} current={current} />
+    <header>
+      <Header current={current} />
       {
         pageTitle && (
           <div class="bg-sky/40 px-4 py-6 text-center">

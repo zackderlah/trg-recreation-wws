@@ -1,0 +1,73 @@
+---
+const { page } = Astro.props;
+const hero = page.hero;
+const raffle = page.raffle;
+const map = page.map;
+---
+
+<section>
+  <img
+    src={hero.image}
+    alt={hero.alt || page.heading}
+    class="h-[240px] w-full object-cover object-[center_67%] md:h-[515px]"
+  />
+</section>
+
+<section class="bg-white px-4 py-12 text-center text-navy">
+  <h1 class="text-4xl md:text-5xl">{hero.line1}</h1>
+  <p class="mt-4 text-xl font-bold">{hero.line2}</p>
+  <p class="mt-4 whitespace-pre-line">{page.meeting}</p>
+  <a class="btn-sky mt-6" href={hero.cta.href}>{hero.cta.label}</a>
+</section>
+
+<section id="map" class="mx-auto max-w-5xl px-4 pb-10">
+  <h2 class="mb-3 text-center text-2xl text-navy">{map.heading}</h2>
+  <p class="mb-4 text-center text-sm">{map.address}</p>
+  <iframe
+    title={`Map of ${map.address}`}
+    class="h-[420px] w-full border border-slate-200"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src={map.embed}
+  ></iframe>
+</section>
+
+<section class="bg-coral px-4 py-12 text-center text-navy">
+  <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed">
+    {page.sections.map((paragraph: string) => (
+      <p>{paragraph}</p>
+    ))}
+  </div>
+</section>
+
+<section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2">
+  <div class="relative mx-auto w-full max-w-xl">
+    <img src={raffle.image} alt="Win 5000 cash in the TRG Golf Day Raffle" class="w-full" />
+    <img src={raffle.qr} alt="Raffle ticket QR code" class="absolute bottom-1 left-3 h-16 w-16 bg-white" />
+  </div>
+  <div>
+    <h2 class="text-3xl text-navy">T<span class="text-coral">R</span>G 2026 Charity Golf Day Major Prize</h2>
+    <p class="mt-4 leading-relaxed">{raffle.body}</p>
+    <a class="btn-coral mt-6" href={raffle.cta.href} target="_blank" rel="noreferrer">
+      {raffle.cta.label}
+    </a>
+  </div>
+</section>
+
+<section class="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-3">
+  {
+    page.cards.map((card: { title: string; icon: string; items: string[] }) => (
+      <article class="border border-slate-300 px-5 py-8 text-center">
+        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy">
+          <img src={card.icon} alt="" class="h-8 w-8" />
+        </div>
+        <h3 class="mt-4 text-xl font-bold text-navy">{card.title}</h3>
+        <ul class="mt-4 list-disc space-y-2 pl-5 text-left text-sm leading-6">
+          {card.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </article>
+    ))
+  }
+</section>

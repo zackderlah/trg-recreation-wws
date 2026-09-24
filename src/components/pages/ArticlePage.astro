@@ -1,46 +1,38 @@
 ---
-import type { Article } from "../../lib/content";
-
-interface Props {
-  article: Article;
-}
-const { article } = Astro.props;
-const hero = article.images.find((image) => !image.src.includes("loading-"));
-const dates: Record<string, string> = {
-  "/what-a-day!-trg-charity-golf-day-2025-wrap-up": "19 January 2026",
-  "/trg-guest-jesse-mccartney-from-belong-in-hockey": "02 May 2026",
-  "/trg-guest-jules-from-hope-for-our-children": "02 May 2026",
-  "/toowoomba’s-own-kevin-howarth-rings-out-success-at-the-australian-town-crier-championships": "31 October 2025",
-  "/trg--unlocked-finance-raise-500-for-toowoomba-hospice": "09 June 2021",
-  "/krazy-kevin-goes-to-gatton!": "17 May 2021"
-};
-const date = article.date || dates[article.path];
+const { page } = Astro.props;
+const blocks = page.blocks || [];
 ---
 
-{hero && (
+{page.image && (
   <div class="bg-white px-4 py-8">
-    <img src={hero.src} alt={hero.alt || article.title} class="mx-auto max-h-[420px] w-full max-w-4xl object-cover" />
+    <img src={page.image} alt={page.heading} class="mx-auto max-h-[420px] w-full max-w-4xl object-cover" />
   </div>
 )}
 
 <article class="mx-auto max-w-3xl px-4 py-10">
-  <h2 class="text-4xl text-navy">{article.title}</h2>
-  {date && <p class="mt-3 text-sm font-bold">{date}</p>}
+  <h2 class="text-4xl text-navy">{page.heading}</h2>
+  {page.date && <p class="mt-3 text-sm font-bold">{page.date}</p>}
   <div class="prose-copy mt-6">
     {
-      article.body
-        .filter((block) => !/^MembersADA/i.test(block.text))
-        .map((block) => {
-        if (block.tag === "h2" || block.tag === "h3") return <h3 class="text-2xl text-navy">{block.text}</h3>;
-        if (block.tag === "li") return <li class="ml-5 list-disc">{block.text}</li>;
+      blocks.map((block: { type: string; text?: string; items?: string[] }) => {
+        if (block.type === "heading") return <h3 class="text-2xl text-navy">{block.text}</h3>;
+        if (block.type === "list") {
+          return (
+            <ul>
+              {(block.items || []).map((item) => (
+                <li class="ml-5 list-disc">{item}</li>
+              ))}
+            </ul>
+          );
+        }
         return <p>{block.text}</p>;
       })
     }
   </div>
   {
-    article.links.length > 0 && (
+    (page.links || []).length > 0 && (
       <p class="mt-6">
-        {article.links.map((link) => (
+        {page.links.map((link: { href: string; text: string }) => (
           <a class="mr-4 text-sky-700 underline" href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
             {link.text}
           </a>

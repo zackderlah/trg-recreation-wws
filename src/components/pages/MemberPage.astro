@@ -1,50 +1,41 @@
 ---
-import type { Member } from "../../lib/content";
-import { directoryTitle } from "../../lib/content";
-
-interface Props {
-  member: Member;
-}
-const { member } = Astro.props;
-const business = directoryTitle(member.slug) || member.business;
-const portrait = member.images[0];
-const logo = member.images[1];
-const contactLines = member.address.filter((line) => {
-  const value = line.toLowerCase();
-  return !member.phones.some((phone) => phone.label.toLowerCase() === value)
-    && !member.emails.some((email) => email.label.toLowerCase() === value)
-    && !member.extras.some((extra) => extra.text.toLowerCase() === value);
-});
+const { page } = Astro.props;
+const blocks = page.blocks || [];
 ---
 
 <section class="bg-white px-4 py-10 text-navy">
   <div class="mx-auto flex max-w-5xl flex-col gap-6 md:flex-row md:items-center">
     {
-      portrait && (
+      page.image && (
         <img
-          src={portrait.src}
-          alt={portrait.alt || member.person}
+          src={page.image}
+          alt={page.person || page.heading}
           class="h-52 w-44 border-4 border-navy object-cover"
         />
       )
     }
     <div>
-      {member.person && <p class="text-2xl font-bold">{member.person}</p>}
-      <h2 class="text-4xl">{business}</h2>
-      {member.category && <p class="mt-2 text-xl">{member.category}</p>}
+      {page.person && <p class="text-2xl font-bold">{page.person}</p>}
+      <h2 class="text-4xl">{page.heading}</h2>
+      {page.category && <p class="mt-2 text-xl">{page.category}</p>}
     </div>
   </div>
 </section>
 
 <article class="prose-copy bg-white px-4 pb-4 text-navy">
   <div class="mx-auto max-w-3xl">
-  {member.intro && <p class="text-lg">{member.intro}</p>}
   {
-    member.body
-      .filter((block) => !/^MembersADA/i.test(block.text) && !/Consent to cookies/i.test(block.text))
-      .map((block) => {
-      if (block.tag === "li") return <li class="ml-5 list-disc">{block.text}</li>;
-      if (block.tag === "h3" || block.tag === "h4") return <h3>{block.text}</h3>;
+    blocks.map((block: { type: string; text?: string; items?: string[] }) => {
+      if (block.type === "list") {
+        return (
+          <ul>
+            {(block.items || []).map((item) => (
+              <li class="ml-5 list-disc">{item}</li>
+            ))}
+          </ul>
+        );
+      }
+      if (block.type === "heading") return <h3>{block.text}</h3>;
       return <p>{block.text}</p>;
     })
   }
@@ -54,12 +45,12 @@ const contactLines = member.address.filter((line) => {
 <section class="mx-auto grid max-w-4xl gap-8 px-4 py-8 md:grid-cols-2">
   <div>
     <h2 class="text-3xl text-navy">Contact Details</h2>
-    {logo && <img src={logo.src} alt={`${business} logo`} class="mt-6 max-h-24 object-contain" />}
+    {page.logo && <img src={page.logo} alt={`${page.heading} logo`} class="mt-6 max-h-24 object-contain" />}
     <div class="mt-4 space-y-1 text-sky-700">
-      {member.phones.map((phone) => <p><a href={phone.href}>{phone.label}</a></p>)}
-      {member.emails.map((email) => <p><a href={email.href}>{email.label}</a></p>)}
+      {(page.phones || []).map((phone: { label: string; href: string }) => <p><a href={phone.href}>{phone.label}</a></p>)}
+      {(page.emails || []).map((email: { label: string; href: string }) => <p><a href={email.href}>{email.label}</a></p>)}
       {
-        member.extras.map((extra) => (
+        (page.extras || []).map((extra: { text: string; href: string }) => (
           <p>
             <a href={extra.href} target={extra.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
               {extra.text}
@@ -70,6 +61,6 @@ const contactLines = member.address.filter((line) => {
     </div>
   </div>
   <address class="pt-12 not-italic leading-7">
-    {contactLines.slice().reverse().map((line) => <p>{line}</p>)}
+    {(page.addressLines || []).map((line: string) => <p>{line}</p>)}
   </address>
 </section>

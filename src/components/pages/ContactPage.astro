@@ -1,16 +1,5 @@
 ---
-const people = [
-  { role: "President", name: "Jye Berghofer", phone: "0424 260 539" },
-  {
-    role: "Co Vice President",
-    note: "(All Charity Golf Day Enquiries)",
-    name: "James Williams",
-    phone: "0481 127 412"
-  },
-  { role: "Co Vice President", name: "Justin Searle", phone: "07 4688 2500" },
-  { role: "Secretary", name: "Kellie Thomas", phone: "0409 347 543" },
-  { role: "Treasurer", name: "Vicki Holmes", phone: "0448 833 550" }
-];
+const { page } = Astro.props;
 ---
 
 <section class="grid bg-white text-navy lg:grid-cols-2">
@@ -18,7 +7,7 @@ const people = [
     <h2 class="text-3xl text-navy">Committee Contacts</h2>
     <div class="mt-8 space-y-6">
       {
-        people.map((person) => (
+        page.contacts.map((person: { role: string; note?: string; name: string; phone: string }) => (
           <article>
             <h3 class="text-xl">{person.role}</h3>
             {person.note && <p class="text-sm">{person.note}</p>}
@@ -33,7 +22,7 @@ const people = [
   </div>
   <div class="bg-white px-6 py-10 text-navy md:px-12">
     <h2 class="text-3xl text-navy">Email Us</h2>
-    <form id="contact-form" class="mt-6 space-y-4" novalidate>
+    <form class="mt-6 space-y-4" method="post" action="/contact">
       <label class="block text-sm">Business Name*
         <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" name="business" required placeholder="Required" />
       </label>
@@ -52,26 +41,10 @@ const people = [
       <label class="block text-sm">Comments and Questions
         <textarea class="mt-1 h-28 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy" name="comments"></textarea>
       </label>
-      <p id="contact-error" class="hidden text-sm text-red-700">Please complete all required fields</p>
-      <p id="contact-note" class="hidden text-sm leading-6">
+      <p class="text-sm leading-6">
         This form matches the original enquiry fields. The WebWave mailbox was not published with a recipient address, so please call a committee member to reach TRG directly.
       </p>
       <button class="cursor-pointer bg-sky px-6 py-2 text-white transition-colors hover:bg-[#3a90c9]" type="submit">Send</button>
     </form>
   </div>
 </section>
-
-<script>
-  const form = document.querySelector<HTMLFormElement>("#contact-form");
-  form?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const error = document.querySelector("#contact-error");
-    const note = document.querySelector("#contact-note");
-    if (!form.checkValidity()) {
-      error?.classList.remove("hidden");
-      return;
-    }
-    error?.classList.add("hidden");
-    note?.classList.remove("hidden");
-  });
-</script>

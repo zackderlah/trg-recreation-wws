@@ -1,0 +1,170 @@
+{
+  "name": "Toowoomba Referral Group",
+  "phone": "0424 260 539",
+  "email": "",
+  "logo": "/assets/TRG-Logo-01-3-md5canzn-md5dxmxq-1b9705.png",
+  "favicon": "/assets/mt841yzb-93fcf7.ico",
+  "facebook": "https://www.facebook.com/toowoombareferralgroup/",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "label": "In The Community",
+      "href": "/community"
+    },
+    {
+      "label": "Charity Golf Day",
+      "href": "/charitygolfday"
+    },
+    {
+      "label": "Members",
+      "href": "/members",
+      "children": [
+        {
+          "label": "Ada Financial",
+          "href": "/ada-financial"
+        },
+        {
+          "label": "Ageloc",
+          "href": "/ageloc"
+        },
+        {
+          "label": "Andersens Toowoomba",
+          "href": "/andersens-toowoomba"
+        },
+        {
+          "label": "Briese Lawyers",
+          "href": "/briese-lawyers"
+        },
+        {
+          "label": "Bright Arc Electrical",
+          "href": "/bright-arc-electrical"
+        },
+        {
+          "label": "Clear Vision Accountancy Group",
+          "href": "/clear-vision-accountancy-group"
+        },
+        {
+          "label": "Colliers International Residential Sales Toowoomba",
+          "href": "/colliers-international-residential-sales-in-toowoomba"
+        },
+        {
+          "label": "Darling Downs Bookkeeping Company",
+          "href": "/darling-downs-bookkeeping-company"
+        },
+        {
+          "label": "Downs Onsite Hydraulics",
+          "href": "/downs-onsite-hydraulics"
+        },
+        {
+          "label": "DP Wealth Advisory",
+          "href": "/dp-wealth-advisory"
+        },
+        {
+          "label": "Frontier Computing",
+          "href": "/frontier-computing"
+        },
+        {
+          "label": "FX Technologies Toowoomba",
+          "href": "/fx-technologies-toowoomba"
+        },
+        {
+          "label": "Grace Information",
+          "href": "/grace-information"
+        },
+        {
+          "label": "HC Pure",
+          "href": "/hc-pure"
+        },
+        {
+          "label": "Krazy Kevin DJ and MC",
+          "href": "/krazy-kevin-dj-and-mc"
+        },
+        {
+          "label": "LJ Hooker Commercial",
+          "href": "/lj-hooker-commercial"
+        },
+        {
+          "label": "Nail Your Content",
+          "href": "/nail-your-content"
+        },
+        {
+          "label": "NorthPrint",
+          "href": "/northprint"
+        },
+        {
+          "label": "Powers Smash Repairs ",
+          "href": "/powers-smash-repairs"
+        },
+        {
+          "label": "Precinct Urban Planning",
+          "href": "/precinct-urban-planning"
+        },
+        {
+          "label": "Preventative Property Care",
+          "href": "/preventative-property-care"
+        },
+        {
+          "label": "Pure Eco Clean",
+          "href": "/pure-eco-clean"
+        },
+        {
+          "label": "Regional Insurance Brokers",
+          "href": "/regional-insurance-brokers"
+        },
+        {
+          "label": "Smith Diesel Fitting Pty Ltd",
+          "href": "/smith-diesel-fitting-pty-ltd"
+        },
+        {
+          "label": "Working Websites",
+          "href": "/working-websites"
+        },
+        {
+          "label": "Your Events Group",
+          "href": "/your-events-group"
+        }
+      ]
+    },
+    {
+      "label": "News",
+      "href": "/news"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "footerNav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "label": "Members",
+      "href": "/members"
+    },
+    {
+      "label": "News",
+      "href": "/news"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    },
+    {
+      "label": "Working Websites",
+      "href": "https://www.workingwebsites.net.au"
+    }
+  ]
+}

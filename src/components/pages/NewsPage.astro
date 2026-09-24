@@ -1,12 +1,12 @@
 ---
-import { cms } from "../../lib/content";
-const featured = cms.newsFeed.find((item) => item.featured) || cms.newsFeed[0];
-const rest = cms.newsFeed.filter((item) => item !== featured);
+const { page } = Astro.props;
+const featured = page.posts.find((item: { featured?: boolean }) => item.featured) || page.posts[0];
+const rest = page.posts.filter((item: { href: string }) => item.href !== featured.href);
 ---
 
 <section class="bg-white px-4 py-10 text-navy">
   <a href={featured.href} class="mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[280px_1fr]">
-    {featured.image && <img src={featured.image} alt="" class="h-48 w-full object-cover" />}
+    {featured.image && <img src={featured.image} alt={featured.title} class="h-48 w-full object-cover" />}
     <div>
       <h2 class="text-3xl text-navy">{featured.title}</h2>
       {featured.date && <p class="mt-2 text-sm">{featured.date}</p>}
@@ -21,9 +21,9 @@ const rest = cms.newsFeed.filter((item) => item !== featured);
 <section class="mx-auto -mt-4 max-w-6xl px-4 pb-10">
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {
-      rest.map((item) => (
+      rest.map((item: { href: string; image?: string; title: string }) => (
         <a href={item.href} class="block bg-blush">
-          {item.image && <img src={item.image} alt="" class="h-36 w-full object-cover" />}
+          {item.image && <img src={item.image} alt={item.title} class="h-36 w-full object-cover" />}
           <div class="px-3 py-4 text-center">
             <h3 class="text-sm font-bold text-navy">{item.title}</h3>
             <p class="mt-2 text-sm">Read More</p>
