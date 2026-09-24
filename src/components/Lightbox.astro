@@ -1,0 +1,29 @@
+<dialog id="site-lightbox" class="lightbox" aria-label="Enlarged image">
+  <div class="lightbox-frame">
+    <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img id="lightbox-image" alt="" />
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>("#site-lightbox");
+  const image = document.querySelector<HTMLImageElement>("#lightbox-image");
+  const close = document.querySelector("#lightbox-close");
+
+  document.addEventListener("click", (event) => {
+    const trigger = (event.target as HTMLElement | null)?.closest<HTMLElement>("[data-lightbox]");
+    if (!trigger || !dialog || !image) return;
+    event.preventDefault();
+    image.src = trigger.dataset.lightbox || "";
+    image.alt = trigger.getAttribute("data-alt") || "Enlarged gallery image";
+    dialog.showModal();
+  });
+
+  close?.addEventListener("click", () => dialog?.close());
+  dialog?.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") dialog?.close();
+  });
+</script>

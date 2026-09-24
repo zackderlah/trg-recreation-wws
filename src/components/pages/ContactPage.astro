@@ -13,7 +13,7 @@ const people = [
 ];
 ---
 
-<section class="grid bg-charcoal text-white lg:grid-cols-2">
+<section class="grid bg-white text-navy lg:grid-cols-2">
   <div class="px-6 py-10 md:px-12">
     <h2 class="text-3xl text-navy">Committee Contacts</h2>
     <div class="mt-8 space-y-6">
@@ -24,39 +24,39 @@ const people = [
             {person.note && <p class="text-sm">{person.note}</p>}
             <p class="mt-2">{person.name}</p>
             <p>
-              Phone: <a class="text-sky-300 underline" href={`tel:${person.phone.replace(/\s/g, "")}`}>{person.phone}</a>
+              Phone: <a class="text-sky-600 underline" href={`tel:${person.phone.replace(/\s/g, "")}`}>{person.phone}</a>
             </p>
           </article>
         ))
       }
     </div>
   </div>
-  <div class="bg-[#6a6a6a] px-6 py-10 text-white md:px-12">
+  <div class="bg-white px-6 py-10 text-navy md:px-12">
     <h2 class="text-3xl text-navy">Email Us</h2>
     <form id="contact-form" class="mt-6 space-y-4" novalidate>
       <label class="block text-sm">Business Name*
-        <input class="mt-1 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" name="business" required placeholder="Required" />
+        <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" name="business" required placeholder="Required" />
       </label>
       <label class="block text-sm">What Type of Business are you in?
-        <input class="mt-1 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" name="type" required placeholder="Required" />
+        <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" name="type" required placeholder="Required" />
       </label>
       <label class="block text-sm">Name*
-        <input class="mt-1 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" name="name" required placeholder="Required" />
+        <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" name="name" required placeholder="Required" />
       </label>
       <label class="block text-sm">Contact Phone*
-        <input class="mt-1 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" name="phone" required placeholder="Required" />
+        <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" name="phone" required placeholder="Required" />
       </label>
       <label class="block text-sm">Email*
-        <input class="mt-1 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" type="email" name="email" required placeholder="Required" />
+        <input class="mt-1 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy placeholder:text-slate-500" type="email" name="email" required placeholder="Required" />
       </label>
       <label class="block text-sm">Comments and Questions
-        <textarea class="mt-1 h-28 w-full border-0 bg-field px-3 py-2 text-white placeholder:text-white/70" name="comments"></textarea>
+        <textarea class="mt-1 h-28 w-full border border-slate-300 bg-[#f5f5f5] px-3 py-2 text-navy" name="comments"></textarea>
       </label>
       <p id="contact-error" class="hidden text-sm text-red-700">Please complete all required fields</p>
       <p id="contact-note" class="hidden text-sm leading-6">
         This form matches the original enquiry fields. The WebWave mailbox was not published with a recipient address, so please call a committee member to reach TRG directly.
       </p>
-      <button class="bg-sky-500 px-6 py-2 text-white" type="submit">Send</button>
+      <button class="cursor-pointer bg-sky px-6 py-2 text-white transition-colors hover:bg-[#3a90c9]" type="submit">Send</button>
     </form>
   </div>
 </section>

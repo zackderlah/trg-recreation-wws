@@ -7,7 +7,7 @@
     "iconPromo": "/assets/megaphone-sound-waves-128px-ff6b6b-b900cd.webp",
     "iconBenefits": "/assets/handshake-e41cf5.webp",
     "iconJoin": "/assets/meeting-128px-18f9d3.webp",
-    "aboutHero": "/assets/TRG-Members-Park-8daa39.webp",
+    "aboutHero": "/assets/TRG-Members-Park-2560.webp",
     "favicon": "/assets/mt841yzb-93fcf7.ico"
   },
   "directory": [
@@ -2499,11 +2499,11 @@
   ],
   "communityImages": [
     {
-      "src": "/assets/blush-1920x1080-45336a.webp",
+      "src": "/assets/blush-1920x1080-full.webp",
       "alt": ""
     },
     {
-      "src": "/assets/blush-1920x1080-45336a.webp",
+      "src": "/assets/blush-1920x1080-full.webp",
       "alt": "TRG supports local community and charity event"
     },
     {
@@ -2513,7 +2513,7 @@
   ],
   "golfImages": [
     {
-      "src": "/assets/golf-day-page-banner-6d6131.webp",
+      "src": "/assets/golf-day-page-banner-full.webp",
       "alt": ""
     },
     {

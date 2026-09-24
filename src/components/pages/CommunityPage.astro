@@ -3,40 +3,39 @@ import { cms } from "../../lib/content";
 const hero = cms.communityImages.find((image) => image.alt)?.src || cms.communityImages[0]?.src;
 ---
 
-<img src={hero} alt="TRG supports local community and charity events" class="h-72 w-full object-cover md:h-[420px]" />
-
-<section class="bg-titlebar px-4 py-10 text-center">
-  <h1 class="text-4xl text-navy md:text-5xl">In the Community</h1>
+<section class="bg-sky/40 px-4 py-6 text-center">
+  <h1 class="text-4xl text-navy md:text-5xl">In the <span class="text-coral">Community</span></h1>
 </section>
 
-<section class="bg-charcoal px-4 py-10 text-white">
-  <div class="mx-auto max-w-5xl">
+<img src={hero} alt="TRG supports local community and charity events" class="h-[220px] w-full object-cover object-[center_73%] md:h-[500px]" />
+
+<section class="bg-white px-4 py-10 text-navy">
+  <div class="mx-auto max-w-5xl space-y-8">
+    <div>
     <h2 class="text-3xl text-navy">
       TRG's Ongoing <span class="text-coral">Support</span> for the Toowoomba Community
     </h2>
     <p class="mt-4 leading-relaxed">
       TRG has long been a proud supporter of the Toowoomba region, investing time, resources, and expertise to help the community thrive. From sponsoring local events and sporting clubs to collaborating with schools and charities, TRG takes an active role in creating opportunities that strengthen the city's social and economic fabric.
     </p>
-  </div>
-</section>
-
-<section class="mx-auto max-w-5xl space-y-8 px-4 py-12">
-  <p>
-    Their involvement goes beyond business—it's about fostering connections and supporting the people who make Toowoomba such a vibrant place to live and work.
-  </p>
-  <div>
-    <h2 class="text-3xl text-navy">Empowering <span class="text-coral">Local</span> Initiatives and Partnerships</h2>
     <p class="mt-4 leading-relaxed">
-      Through partnerships with local organisations, TRG champions initiatives that drive education, sustainability, and innovation. Whether it's contributing to community development projects, backing local entrepreneurs, or supporting youth programs, TRG continually seeks to make a lasting difference. Their focus on empowering local talent and nurturing future leaders reflects a deep belief in Toowoomba's potential and resilience.
+      Their involvement goes beyond business—it's about fostering connections and supporting the people who make Toowoomba such a vibrant place to live and work.
     </p>
-  </div>
-  <div>
-    <h2 class="text-3xl text-navy">Building a <span class="text-coral">Brighter</span> Future Together</h2>
-    <p class="mt-4 leading-relaxed">
-      TRG's ongoing presence in the Toowoomba community demonstrates their unwavering commitment to giving back. By aligning their values with the needs of the region, they continue to build meaningful relationships and contribute to a stronger, more connected community.
-    </p>
-    <p class="mt-4 leading-relaxed">
-      As Toowoomba continues to grow, TRG remains dedicated to playing its part—investing in people, supporting local success, and helping shape a brighter future for generations to come.
-    </p>
+    </div>
+    <div>
+      <h2 class="text-3xl text-navy">Empowering <span class="text-coral">Local</span> Initiatives and Partnerships</h2>
+      <p class="mt-4 leading-relaxed">
+        Through partnerships with local organisations, TRG champions initiatives that drive education, sustainability, and innovation. Whether it's contributing to community development projects, backing local entrepreneurs, or supporting youth programs, TRG continually seeks to make a lasting difference. Their focus on empowering local talent and nurturing future leaders reflects a deep belief in Toowoomba's potential and resilience.
+      </p>
+    </div>
+    <div>
+      <h2 class="text-3xl text-navy">Building a <span class="text-coral">Brighter</span> Future Together</h2>
+      <p class="mt-4 leading-relaxed">
+        TRG's ongoing presence in the Toowoomba community demonstrates their unwavering commitment to giving back. By aligning their values with the needs of the region, they continue to build meaningful relationships and contribute to a stronger, more connected community.
+      </p>
+      <p class="mt-4 leading-relaxed">
+        As Toowoomba continues to grow, TRG remains dedicated to playing its part—investing in people, supporting local success, and helping shape a brighter future for generations to come.
+      </p>
+    </div>
   </div>
 </section>

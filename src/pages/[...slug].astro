@@ -12,10 +12,10 @@ import { articleByPath, cms, memberBySlug } from "../lib/content";
 
 export function getStaticPaths() {
   const pages = [
-    { slug: "about", kind: "about", title: "Toowoomba Referral Group | About Us", heading: "", overlay: true },
-    { slug: "community", kind: "community", title: "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives", heading: "", overlay: true },
-    { slug: "charitygolfday", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
-    { slug: "annual-charity-golf-day", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Charity Golf Day" },
+    { slug: "about", kind: "about", title: "Toowoomba Referral Group | About Us", heading: "" },
+    { slug: "community", kind: "community", title: "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives", heading: "" },
+    { slug: "charitygolfday", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Golf Day" },
+    { slug: "annual-charity-golf-day", kind: "golf", title: "TRG Annual Charity Golf Day | Swing for a Cause", heading: "TRG Annual Golf Day" },
     { slug: "members", kind: "members", title: "TRG Members List", heading: "TRG Member List" },
     { slug: "news", kind: "news", title: "Toowoomba Business Referral Group News", heading: "TRG News" },
     { slug: "contact", kind: "contact", title: "Contact | Toowoomba Business Referral Group", heading: "Contact TRG" }

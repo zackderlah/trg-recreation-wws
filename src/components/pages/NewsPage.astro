@@ -4,7 +4,7 @@ const featured = cms.newsFeed.find((item) => item.featured) || cms.newsFeed[0];
 const rest = cms.newsFeed.filter((item) => item !== featured);
 ---
 
-<section class="bg-charcoal px-4 py-10 text-white">
+<section class="bg-white px-4 py-10 text-navy">
   <a href={featured.href} class="mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[280px_1fr]">
     {featured.image && <img src={featured.image} alt="" class="h-48 w-full object-cover" />}
     <div>
@@ -15,10 +15,10 @@ const rest = cms.newsFeed.filter((item) => item !== featured);
   </a>
 </section>
 
-<section class="bg-[#6d6d6d] px-4 pb-28 pt-10">
+<section class="bg-[#f5f5f5] px-4 pb-8 pt-10">
   <h2 class="mx-auto max-w-6xl text-3xl text-navy">More News</h2>
 </section>
-<section class="mx-auto -mt-20 max-w-6xl px-4 pb-10">
+<section class="mx-auto -mt-4 max-w-6xl px-4 pb-10">
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {
       rest.map((item) => (

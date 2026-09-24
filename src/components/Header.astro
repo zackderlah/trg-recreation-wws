@@ -23,7 +23,7 @@ function currentOf(href: string) {
 }
 ---
 
-<div class:list={["grid grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-3 md:px-8", overlay ? "bg-black/25" : "bg-charcoal"]}>
+<div class="grid min-h-[72px] grid-cols-[auto_1fr_auto] items-center gap-4 bg-white px-4 py-2 md:min-h-[100px] md:px-8">
   <a href="/" class="shrink-0">
     <img src={cms.brand.logo} alt="Toowoomba Business Referral Group Logo" class="h-14 w-auto md:h-16" />
   </a>
@@ -35,7 +35,7 @@ function currentOf(href: string) {
     aria-controls="site-nav"
   >
     <span class="sr-only">Open menu</span>
-    <svg viewBox="0 0 12 14" class="h-6 w-6 fill-white" aria-hidden="true">
+    <svg viewBox="0 0 12 14" class="h-6 w-6 fill-navy" aria-hidden="true">
       <path d="M12 10.5v1q0 .2-.15.35T11.5 12h-11q-.2 0-.35-.15T0 11.5v-1q0-.2.15-.35T.5 10h11q.2 0 .35.15t.15.35zM12 6.5v1q0 .2-.15.35T11.5 8h-11q-.2 0-.35-.15T0 7.5v-1q0-.2.15-.35T.5 6h11q.2 0 .35.15t.15.35zM12 2.5v1q0 .2-.15.35T11.5 4h-11q-.2 0-.35-.15T0 3.5v-1q0-.2.15-.35T.5 2h11q.2 0 .35.15t.15.35z"></path>
     </svg>
   </button>
@@ -70,7 +70,7 @@ function currentOf(href: string) {
   </nav>
   <a
     href="https://www.facebook.com/toowoombareferralgroup/"
-    class="col-start-3 hidden h-10 w-10 items-center justify-center rounded bg-[#1877f2] md:inline-flex"
+    class="col-start-3 hidden h-10 w-10 items-center justify-center rounded-sm bg-[#1877f2] md:inline-flex"
     aria-label="TRG Facebook"
     target="_blank"
     rel="noreferrer"
@@ -81,9 +81,9 @@ function currentOf(href: string) {
   </a>
 </div>
 
-<div id="mobile-panel" class="hidden bg-charcoal px-4 pb-4 md:hidden">
+<div id="mobile-panel" class="hidden border-b border-sky/40 bg-white px-4 pb-4 md:hidden">
   <nav aria-label="Mobile">
-    <ul class="space-y-1 text-white">
+    <ul class="space-y-1 text-navy">
       {
         items.map((item) => (
           <li>
@@ -97,7 +97,7 @@ function currentOf(href: string) {
         <a class="block py-2" href="https://www.facebook.com/toowoombareferralgroup/" target="_blank" rel="noreferrer">Facebook</a>
       </li>
     </ul>
-    <details class="mt-2 text-white">
+    <details class="mt-2 text-navy">
       <summary class="cursor-pointer py-2">Member businesses</summary>
       <ul class="max-h-64 overflow-auto pl-3">
         {
