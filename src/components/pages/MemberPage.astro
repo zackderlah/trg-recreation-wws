@@ -35,7 +35,11 @@ const blocks = page.blocks || [];
           </ul>
         );
       }
-      if (block.type === "heading") return <h3>{block.text}</h3>;
+      if (block.type === "heading") {
+        if (block.level === "h2") return <h2 class="text-2xl">{block.text}</h2>;
+        if (block.level === "h4") return <h4 class="text-lg font-bold">{block.text}</h4>;
+        return <h3>{block.text}</h3>;
+      }
       return <p>{block.text}</p>;
     })
   }

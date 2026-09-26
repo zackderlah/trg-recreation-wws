@@ -311,6 +311,11 @@
           "src": "/assets/Ada-logo---orange-f547e4.webp",
           "alt": "Ada Financial"
         }
+      ],
+      "addressLines": [
+        "Suite 6 120a Russell Street",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -360,6 +365,11 @@
           "src": "/assets/Ageloc-Logo-93e3da.webp",
           "alt": "Agelo"
         }
+      ],
+      "addressLines": [
+        "124 Hiwinds Rd",
+        "Blue Mountain Heights",
+        "Qld 4350"
       ]
     },
     {
@@ -430,6 +440,11 @@
           "src": "/assets/ANDERSENS_CARPET-3a74dd.webp",
           "alt": "Andersens Toowoomba"
         }
+      ],
+      "addressLines": [
+        "Corner James and Prescott Street",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -536,6 +551,11 @@
           "src": "/assets/breiese-lawyers-9fd766.webp",
           "alt": "Lawyer Toowoomba"
         }
+      ],
+      "addressLines": [
+        "303 Margaret Street",
+        "Toowoomba City",
+        "Qld 4350"
       ]
     },
     {
@@ -650,6 +670,11 @@
           "src": "/assets/Bright-Arc-Elecrical-Logo-RGB-d0f5d2.webp",
           "alt": "Bright Arc Electrical"
         }
+      ],
+      "addressLines": [
+        "Service Area",
+        "Toowoomba and surrounding area",
+        "Qld 4350"
       ]
     },
     {
@@ -720,6 +745,11 @@
           "src": "/assets/CVAStackedLogo-positive-201w-66e775.webp",
           "alt": "Clear Vision Accountancy Group"
         }
+      ],
+      "addressLines": [
+        "The Mills Precinct Bld 3 Ground Floor",
+        "275 Ruthven Street",
+        "Toowoomba Qld 4350"
       ]
     },
     {
@@ -794,6 +824,11 @@
           "src": "/assets/colliers-logo-b189f7.webp",
           "alt": "Colliers International Residential Sales Toowoomba"
         }
+      ],
+      "addressLines": [
+        "171 Hume Street",
+        "Toowoomba City",
+        "Qld 4350"
       ]
     },
     {
@@ -852,6 +887,11 @@
           "src": "/assets/darling-downs-bookkeeping-8e5426.webp",
           "alt": "Darling Downs Bookkeeping Company"
         }
+      ],
+      "addressLines": [
+        "Level 1",
+        "16 Prescott Street",
+        "Toowoomba Qld 4350"
       ]
     },
     {
@@ -909,6 +949,12 @@
           "src": "/assets/Downs-Onsite-Hydraulics-Logo-02-8ecff0.webp",
           "alt": "Downs Onsite Hydraulics"
         }
+      ],
+      "addressLines": [
+        "PO Box 268",
+        "Drayton North",
+        "Qld 4350",
+        "Website Not Supplied"
       ]
     },
     {
@@ -971,6 +1017,11 @@
           "src": "/assets/DPW-logo-5b44e5.webp",
           "alt": "DP Wealth Advisory"
         }
+      ],
+      "addressLines": [
+        "The Foundry, 259 Ruthven Street",
+        "Toowoomba City",
+        "Qld 4350"
       ]
     },
     {
@@ -1124,6 +1175,11 @@
           "src": "/assets/fuji-business-centre-600px-9ddc01.webp",
           "alt": "FX Technologies Toowoomba"
         }
+      ],
+      "addressLines": [
+        "12B 189 Anzac Avenue",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -1186,6 +1242,11 @@
           "src": "/assets/Grace-Information-Management-Logo-94c0a6.webp",
           "alt": "Grace information"
         }
+      ],
+      "addressLines": [
+        "807 Greenwattle Street",
+        "Glenvale",
+        "Qld 4350"
       ]
     },
     {
@@ -1238,6 +1299,11 @@
           "src": "/assets/hcp-LOGO-maaieycv-318e80.webp",
           "alt": "HC Pure"
         }
+      ],
+      "addressLines": [
+        "12 Progress Court",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -1383,6 +1449,11 @@
           "src": "/assets/ljhcommercial-logo-3dcf72.webp",
           "alt": "LJ Hooker Commercial Toowoomba"
         }
+      ],
+      "addressLines": [
+        "Level 1 / 677-683 Ruthven St",
+        "South Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -1497,6 +1568,13 @@
           "src": "/assets/Northprint-Logo-Tagline_Full-Colour-300px-408860.webp",
           "alt": "NorthPrint"
         }
+      ],
+      "addressLines": [
+        "196 Stephen Street",
+        "Toowoomba",
+        "Qld 4350",
+        "Mobile: 0499 922 172",
+        "Office: 07 2100 2961"
       ]
     },
     {
@@ -1546,6 +1624,12 @@
           "src": "/assets/Powers-Smash-Repairs-92ce7d.webp",
           "alt": "TRG"
         }
+      ],
+      "addressLines": [
+        "424-428 Anzac Ave",
+        "Drayton",
+        "Qld 4350",
+        "Contact Phone"
       ]
     },
     {
@@ -1628,6 +1712,11 @@
           "src": "/assets/Precinct-logo-updated-e61e81.webp",
           "alt": "Precinct"
         }
+      ],
+      "addressLines": [
+        "14-16 Hill Street (PO Box 3038)",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -1698,6 +1787,9 @@
           "src": "/assets/ppc-logo-300px-0f20cc.webp",
           "alt": "Property Property Care"
         }
+      ],
+      "addressLines": [
+        "Toowoomba Qld 4350"
       ]
     },
     {
@@ -1815,6 +1907,11 @@
           "src": "/assets/New-Regional-Horizontal-logo-3596c7.webp",
           "alt": "Regional Insurance Brokers Toowoomba"
         }
+      ],
+      "addressLines": [
+        "68 West Street",
+        "Toowoomba",
+        "Qld 4350"
       ]
     },
     {
@@ -1913,6 +2010,11 @@
           "src": "/assets/SMITH-Diesel-Logo-Half-Black-NEW-790b31.webp",
           "alt": "Smith Diesel Fitting Pty Ltd"
         }
+      ],
+      "addressLines": [
+        "We Come to You!",
+        "Located in Wellcamp",
+        "Queensland 4350"
       ]
     },
     {
@@ -1982,6 +2084,12 @@
           "src": "/assets/screenshot-logojoycom-2018-01-16-10-12-29-418-0d1e81.webp",
           "alt": "Web Design Toowoomba"
         }
+      ],
+      "addressLines": [
+        "25 Alford Street",
+        "Mount Lofty",
+        "Qld 4350",
+        "workingwebsites.net.au"
       ]
     },
     {
@@ -2071,7 +2179,7 @@
       "path": "/what-a-day!-trg-charity-golf-day-2025-wrap-up",
       "title": "What a Day! TRG Charity Golf Day 2025 Wrap-Up",
       "description": "Our annual Charity Golf Day was nothing short of incredible. From the first tee-off to the final putt, the day was packed with laughs, generosity, community spirit, and (let’s be honest) a few creative golf swings.",
-      "date": "",
+      "date": "19 January 2026",
       "body": [
         {
           "tag": "p",
@@ -2213,7 +2321,9 @@
           "text": "Facebook Page",
           "href": "https://www.facebook.com/media/set/?set=a.1162280839439927&type=3"
         }
-      ]
+      ],
+      "heading": "What a Day! TRG Charity Golf Day 2025 Wrap-Up",
+      "image": "/assets/IMG_0976-1-57c19e.webp"
     },
     {
       "type": "article",
@@ -2221,7 +2331,7 @@
       "path": "/trg-guest-jesse-mccartney-from-belong-in-hockey",
       "title": "TRG Guest: Jesse McCartney from Belong in Hockey",
       "description": "TRG was inspired to hear from Jessie McCartney, co-founder of award-winning initiative Belong in Hockey — a Toowoomba program using sport to support refugees and build community connections.",
-      "date": "",
+      "date": "02 May 2026",
       "body": [
         {
           "tag": "h3",
@@ -2262,7 +2372,9 @@
           "alt": "TRG Guest: Jesse McCartney from Belong in Hockey"
         }
       ],
-      "links": []
+      "links": [],
+      "heading": "TRG Guest: Jesse McCartney from Belong in Hockey",
+      "image": "/assets/IMG_1612-34d0a4.webp"
     },
     {
       "type": "article",
@@ -2270,7 +2382,7 @@
       "path": "/trg-guest-jules-from-hope-for-our-children",
       "title": "TRG GUEST: Jules from Hope for Our Children",
       "description": "TRG was honoured to welcome Jules Davey, CEO of Hope for Our Children, to our Wednesday morning meeting. Hear about their incredible Bags of Hope program and how TRG is proud to support their vital work in Toowoomba.",
-      "date": "",
+      "date": "02 May 2026",
       "body": [
         {
           "tag": "h3",
@@ -2316,7 +2428,9 @@
           "text": "hopeforourchildren.com.au",
           "href": "http://hopeforourchildren.com.au"
         }
-      ]
+      ],
+      "heading": "TRG GUEST: Jules from Hope for Our Children",
+      "image": "/assets/IMG_0586-d6ffc6.webp"
     },
     {
       "type": "article",
@@ -2324,7 +2438,7 @@
       "path": "/toowoomba’s-own-kevin-howarth-rings-out-success-at-the-australian-town-crier-championships",
       "title": "Toowoomba’s Own Kevin Howarth Rings Out Success at the Australian Town Crier Championships",
       "description": "Australia’s Loudest Crier is from Toowoomba! Kevin Howarth takes home four major awards, showcasing his dedication and pride in the local community.",
-      "date": "",
+      "date": "31 October 2025",
       "body": [
         {
           "tag": "h3",
@@ -2377,7 +2491,9 @@
           "alt": "Toowoomba’s Own Kevin Howarth Rings Out Success at the Australian Town Crier Championships"
         }
       ],
-      "links": []
+      "links": [],
+      "heading": "Toowoomba’s Own Kevin Howarth Rings Out Success at the Australian Town Crier Championships",
+      "image": "/assets/geoff-mcdonald-krazy-kevin-853px-d90f10.webp"
     },
     {
       "type": "article",
@@ -2385,7 +2501,7 @@
       "path": "/trg--unlocked-finance-raise-500-for-toowoomba-hospice",
       "title": "TRG & Unlocked Finance Raise $500 for Toowoomba Hospice",
       "description": "Recently TRG proudly donated $500.00 to assist Sam Benz from Unlocked Finance raise funds for Toowoomba Hospice at their annual \"Hang ya boss out to dry\" event!  Pictured here is TRG Treasurer Vicki Holmes from Darling Downs Bookkeeping Company presenting Chloe Benz from Unlocked Finance with our donation!",
-      "date": "",
+      "date": "09 June 2021",
       "body": [
         {
           "tag": "p",
@@ -2410,7 +2526,9 @@
           "alt": "TRG & Unlocked Finance Raise $500 for Toowoomba Hospice"
         }
       ],
-      "links": []
+      "links": [],
+      "heading": "TRG & Unlocked Finance Raise $500 for Toowoomba Hospice",
+      "image": "/assets/sam-benz-HYBOTD-2021-6d7237.webp"
     },
     {
       "type": "article",
@@ -2418,7 +2536,7 @@
       "path": "/krazy-kevin-goes-to-gatton!",
       "title": "Krazy Kevin goes to Gatton!",
       "description": "The TRG Paparazzi caught one of it's more colourful members Krazy Kevin and Geoff Roberts from Power FM Radio Toowoomba broadcasting from Gatton last week!",
-      "date": "",
+      "date": "17 May 2021",
       "body": [
         {
           "tag": "p",
@@ -2448,7 +2566,9 @@
           "text": "Krazy Kevin",
           "href": "/krazy-kevin-dj-and-mc"
         }
-      ]
+      ],
+      "heading": "Krazy Kevin goes to Gatton!",
+      "image": "/assets/krazy-kevin-2021-power-fm-853px-dd8121.webp"
     }
   ],
   "aboutImages": [
@@ -3598,5 +3718,771 @@
       "title": "TRG Annual Charity Golf Day | Swing for a Cause",
       "description": "Join us for the TRG Annual Charity Golf Day. A day of friendly competition, networking, and giving back. Enjoy 18 holes, great company, and help raise funds for our chosen charities. Register today and make a difference on and off the green."
     }
-  ]
+  ],
+  "pageContent": {
+    "/": {
+      "kind": "home",
+      "heading": "Toowoomba Referral Group",
+      "seo": {
+        "title": "Business Networking | Toowoomba Referral Group",
+        "description": "Toowoomba Referral Group (TRG) is a business networking and referral group which focuses on building relationships and business leads within a structured and positive environment."
+      },
+      "hero": {
+        "image": "/assets/TRG-Members-Park-3-7efe69.webp",
+        "alt": "Toowoomba Referral Group",
+        "line1": "Toowoomba Referral Group",
+        "line2": "Generate quality referrals for your business",
+        "cta": {
+          "label": "View Map",
+          "href": "#map"
+        }
+      },
+      "meeting": "Meeting at Urban Grounds Cafe\nWednesdays at 9am",
+      "map": {
+        "heading": "Urban Grounds Cafe",
+        "embed": "https://maps.google.com/maps?q=20%20Herries%20Street%20Toowoomba&z=15&output=embed",
+        "address": "20 Herries Street, Toowoomba"
+      },
+      "sections": [
+        "Toowoomba Referral Group (TRG) is a business networking community that builds strong relationships and generates high-quality business leads in a supportive, structured environment.",
+        "With a strong community spirit, TRG also raises significant funds for local charities through its popular annual charity golf event.",
+        "Beyond business, members enjoy a vibrant social calendar—optional events include free breakfasts, Christmas in July, Christmas Trivia, and an end-of-year Christmas Party, creating a fun, connected, and engaged group culture."
+      ],
+      "raffle": {
+        "image": "/assets/TRG-Raffle-Raffle-Tix-1200-x-627-px-a071cd.webp",
+        "qr": "/assets/QRCode_RaffleTix_-352ee7.webp",
+        "heading": "TRG 2026 Charity Golf Day Major Prize",
+        "body": "The Toowoomba Referral Group is hosting its charity golf day again in November 2026. Participants will have the chance to win a major cash prize of $5,000. Join us for a day of golf and support a good cause. Tickets are only $10 each and can be purchased online.",
+        "cta": {
+          "label": "Buy Your Tickets Here",
+          "href": "https://www.raffletix.com.au/?ref=3dv5w&sref=9dxr33fa"
+        }
+      },
+      "cards": [
+        {
+          "title": "Business Promotion",
+          "icon": "/assets/megaphone-sound-waves-128px-ff6b6b-b900cd.webp",
+          "items": [
+            "At the the beginning of every meeting, each TRG member is allocated 60 seconds to promote their business.",
+            "Members are also invited and scheduled to prepare and deliver 20 minute presentations on their products and services at least twice during the calendar year.",
+            "Network with other members before, during and after the meeting to discuss ideas and exchange information and professional advice.",
+            "Participate in association sponsored activities and events."
+          ]
+        },
+        {
+          "title": "Member Benefits",
+          "icon": "/assets/handshake-e41cf5.webp",
+          "items": [
+            "Generate and receive quality business leads and referrals.",
+            "Be inspired, motivated and increase your knowledge base from our guest speakers.",
+            "Receive support and actively promote other business owners and managers.",
+            "Be equipped with business tools for self-confidence and business development.",
+            "Build confidence in the delivery of your product/service.",
+            "Be part of an environment which encourages brainstorming."
+          ]
+        },
+        {
+          "title": "Who Can Join?",
+          "icon": "/assets/meeting-128px-18f9d3.webp",
+          "items": [
+            "Any person who wants to increase business success by meeting with other people for the purpose of giving and receiving quality referrals.",
+            "Any person who gives without expecting something in return.",
+            "A member must have a reputation for good business ethics.",
+            "There is only one member per business category.",
+            "Each member is approved by the management committee to ensure quality of membership is maintained."
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/TRG-Members-Park-3-7efe69.webp",
+          "alt": "Toowoomba Referral Group"
+        }
+      ]
+    },
+    "/about": {
+      "kind": "about",
+      "heading": "About TRG",
+      "seo": {
+        "title": "Toowoomba Referral Group | About Us",
+        "description": "Toowoomba Referral Group is a business referral group providing networking and business leads."
+      },
+      "hero": "/assets/TRG-Members-Park-2560.webp",
+      "body": [
+        "Toowoomba Referral Group is a business referral group which focuses on providing business networking and business leads within a structured and positive environment.",
+        "TRG is a registered Not for Profit Incorporated Association (IA55093) that organises business networking meetings every Wednesday from 9am to 10am for members and invited guests.",
+        "Each member is given the opportunity to promote their business. Guest and motivational speakers from a range of professions are regularly organised to present to the group."
+      ],
+      "blocks": [
+        {
+          "type": "image",
+          "src": "/assets/TRG-Members-Park-2560.webp",
+          "alt": "About TRG Business Networking"
+        },
+        {
+          "type": "heading",
+          "text": "What We Do"
+        },
+        {
+          "type": "paragraph",
+          "text": "Toowoomba Referral Group is a business referral group which focuses on providing business networking and business leads within a structured and positive environment."
+        },
+        {
+          "type": "heading",
+          "text": "What's Involved?"
+        },
+        {
+          "type": "paragraph",
+          "text": "TRG is a registered Not for Profit Incorporated Association (IA55093) that organises business networking meetings every Wednesday from 9am to 10am for members and invited guests."
+        }
+      ],
+      "committee": [
+        {
+          "name": "Jye Berghofer",
+          "role": "President",
+          "org": "DP Wealth Advisory",
+          "image": "/assets/Jye-6e4277.webp",
+          "alt": "TRG President"
+        },
+        {
+          "name": "Justin Searle",
+          "role": "Vice President",
+          "org": "Clear Vision Accountancy",
+          "image": "/assets/Justin-6b988a.webp",
+          "alt": "TRG Vice President"
+        },
+        {
+          "name": "James Williams",
+          "role": "Events Co-Ordinator",
+          "org": "Precinct Urban Planning",
+          "image": "/assets/James-eb2e51.webp",
+          "alt": "TRG Vice President"
+        },
+        {
+          "name": "Vicki Holmes",
+          "role": "Treasurer",
+          "org": "Darling Downs Bookkeeping Company",
+          "image": "/assets/Vicki-334361.webp",
+          "alt": "TRG Treasurer"
+        },
+        {
+          "name": "Kellie Thomas",
+          "role": "Secretary",
+          "org": "Regional Insurance",
+          "image": "/assets/Kelli-edcd28.webp",
+          "alt": "TRG Secretary"
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/TRG-Members-Park-2560.webp",
+          "alt": "About TRG Business Networking"
+        }
+      ]
+    },
+    "/community": {
+      "kind": "community",
+      "heading": "In the Community",
+      "seo": {
+        "title": "TRG in the Community | Supporting Toowoomba’s Growth and Local Initiatives",
+        "description": "TRG supports local Toowoomba community and charity events."
+      },
+      "hero": "/assets/blush-1920x1080-full.webp",
+      "body": [
+        "TRG has long been a proud supporter of the Toowoomba region, investing time, resources, and expertise to help the community thrive. From sponsoring local events and sporting clubs to collaborating with schools and charities, TRG takes an active role in creating opportunities that strengthen the city's social and economic fabric.",
+        "Their involvement goes beyond business—it's about fostering connections and supporting the people who make Toowoomba such a vibrant place to live and work.",
+        "Through partnerships with local organisations, TRG champions initiatives that drive education, sustainability, and innovation. Whether it's contributing to community development projects, backing local entrepreneurs, or supporting youth programs, TRG continually seeks to make a lasting difference. Their focus on empowering local talent and nurturing future leaders reflects a deep belief in Toowoomba's potential and resilience.",
+        "TRG's ongoing presence in the Toowoomba community demonstrates their unwavering commitment to giving back. By aligning their values with the needs of the region, they continue to build meaningful relationships and contribute to a stronger, more connected community.",
+        "As Toowoomba continues to grow, TRG remains dedicated to playing its part—investing in people, supporting local success, and helping shape a brighter future for generations to come."
+      ],
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "In the Community"
+        },
+        {
+          "type": "image",
+          "src": "/assets/blush-1920x1080-full.webp",
+          "alt": "TRG supports local community and charity events"
+        },
+        {
+          "type": "heading",
+          "text": "TRG's Ongoing Support for the Toowoomba Community"
+        },
+        {
+          "type": "paragraph",
+          "text": "TRG has long been a proud supporter of the Toowoomba region, investing time, resources, and expertise to help the community thrive."
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/blush-1920x1080-full.webp",
+          "alt": "TRG supports local community and charity events"
+        }
+      ]
+    },
+    "/charitygolfday": {
+      "kind": "golf",
+      "heading": "TRG Annual Golf Day",
+      "seo": {
+        "title": "TRG Annual Charity Golf Day | Swing for a Cause",
+        "description": "The TRG Charity Golf Day raises funds for local Toowoomba charities."
+      },
+      "banner": "/assets/golf-day-page-banner-full.webp",
+      "intro": [
+        "The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities.",
+        "Held at the picturesque Toowoomba Golf Club, it’s a day where local businesses, sponsors, and players come together for a round of golf, good food, and great company — all for a worthy cause.",
+        "With team registrations, hole sponsorships, and prizes throughout the day, the eventblends friendly competition with genuine community spirit, helping make adifference for local families affected by cancer and serious injury."
+      ],
+      "registerHref": "https://forms.office.com/Pages/ResponsePage.aspx?id=1XPjGSBSd0KXMVDz6pAW0BIWRiZ4Y5VBtR9gnrxHwoNUMjhUQldUS1ZHMTJXVTZYME5CNldJVjhJNi4u",
+      "raffle": {
+        "image": "/assets/TRG-Raffle-Raffle-Tix-1200-x-627-px-a071cd.webp",
+        "heading": "TRG 2026 Charity Golf Day Major Prize",
+        "body": "The Toowoomba Referral Group is hosting its charity golf day again in November 2026. Participants will have the chance to win a major cash prize of $5,000. Tickets are only $10 each.",
+        "cta": {
+          "label": "Buy Your Tickets Here",
+          "href": "https://www.raffletix.com.au/?ref=3dv5w&sref=9dxr33fa"
+        }
+      },
+      "sponsorships": [
+        "Hole in One Sponsor",
+        "Minor Sponsorship (Donation)",
+        "Major Sponsorship (Donation)",
+        "Raffle/Auction Prize (Donation)",
+        "All other sponsorship opportunities are currently exhausted"
+      ],
+      "event": {
+        "heading": "2026 Golf Day",
+        "date": "Friday 27th November",
+        "venue": "TOOWOOMBA GOLF CLUB",
+        "address": "235-323 Rowbotham St, Middle Ridge",
+        "registration": "Registration 8:00am",
+        "teeOff": "Tee Off 9:00am"
+      },
+      "charities": [
+        {
+          "name": "Hope Horizons",
+          "image": "/assets/hope-horizons-logo-600px-mh2w6u2e-b27d50.webp",
+          "body": "Hope Horizons Cancer Wellness Centre opened its doors in Toowoomba, Southeast Queensland in 2017. Born from a desire to see free allied health services provided for those living with cancer in the region, while ever cancer remains, our mission is to diminish its impact.",
+          "href": "https://www.hopehorizons.com.au/"
+        },
+        {
+          "name": "Maddox's Helping Hand",
+          "image": "/assets/Maddox-logo-mh2wfh53-d4b620.webp",
+          "body": "Maddox's Helping Hand Foundation (MHHF) was established in 2020 and supports ACCISS where the public hospital system cannot. In May 2021 MHHF held its first fundraising event and has since raised almost $700,000.",
+          "href": "https://maddoxshelpinghandfoundation.com.au/"
+        }
+      ],
+      "sponsors": {
+        "major": [
+          "Tilly’s",
+          "Briese Lawyers",
+          "Smith Diesel Fitting",
+          "Regional Insurance Brokers",
+          "H & H Catering",
+          "Southern Cross Austereo"
+        ],
+        "hole": [
+          "HC Pure",
+          "Clearvision Accountancy",
+          "Andersons Toowoomba",
+          "DP Wealth Advisory",
+          "Ada Financial",
+          "Cornerstone Risk Group",
+          "Liebke Tyres",
+          "Alliance Building & Construction",
+          "Sunrise Surveying",
+          "LJ Hooker Toowoomba",
+          "The Gentleman’s Barber",
+          "X Golf Toowoomba",
+          "WD Building Design",
+          "Australian Ecological Restoration Services",
+          "Clearspan Building Solutions",
+          "Toowoomba Body Corporate Managers & Consultants",
+          "Blackbird Projects",
+          "Superior Plumbing & Civil"
+        ],
+        "other": [
+          "Ashley North – Colliers Toowoomba",
+          "Westside Timbers",
+          "JLL",
+          "Precinct Urban Planning",
+          "Working Websites",
+          "Sunpork",
+          "Ground Me Coffee"
+        ]
+      },
+      "pastCharities": [
+        {
+          "src": "/assets/Blush-Cancer-Care-9af64f.webp",
+          "alt": "Blush Cancer Care"
+        },
+        {
+          "src": "/assets/young-veterans-78b0e7.webp",
+          "alt": "Young Veterans"
+        }
+      ],
+      "galleries": {
+        "2024": [
+          "/assets/2024-TRG-Golf-Day-d9d86e.webp",
+          "/assets/2024-TRG-Golf-Day-728177.webp",
+          "/assets/2024-TRG-Golf-Day-e3332e.webp",
+          "/assets/2024-TRG-Golf-Day-499a69.webp",
+          "/assets/2024-TRG-Golf-Day-84891b.webp",
+          "/assets/2024-TRG-Golf-Day-ec5c6e.webp",
+          "/assets/2024-TRG-Golf-Day-e29f5e.webp"
+        ],
+        "2025": [
+          "/assets/IMG_0799-b0ce94.webp",
+          "/assets/IMG_0725-9c82b4.webp",
+          "/assets/IMG_0729-7da0a1.webp",
+          "/assets/IMG_0743-924540.webp",
+          "/assets/IMG_0775-ae2ca1.webp",
+          "/assets/IMG_0916-97ec06.webp",
+          "/assets/IMG_0891-70321d.webp",
+          "/assets/IMG_0977-dfaef3.webp"
+        ]
+      },
+      "images": [
+        {
+          "src": "/assets/golf-day-page-banner-full.webp",
+          "alt": "TRG Annual Charity Golf Day"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "TRG Annual Golf Day"
+        },
+        {
+          "type": "paragraph",
+          "text": "The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities."
+        },
+        {
+          "type": "image",
+          "src": "/assets/golf-day-page-banner-full.webp",
+          "alt": "TRG Annual Charity Golf Day"
+        }
+      ]
+    },
+    "/annual-charity-golf-day": {
+      "kind": "golf",
+      "heading": "TRG Annual Golf Day",
+      "seo": {
+        "title": "TRG Annual Charity Golf Day | Swing for a Cause",
+        "description": "The TRG Charity Golf Day raises funds for local Toowoomba charities."
+      },
+      "banner": "/assets/golf-day-page-banner-full.webp",
+      "intro": [
+        "The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities.",
+        "Held at the picturesque Toowoomba Golf Club, it’s a day where local businesses, sponsors, and players come together for a round of golf, good food, and great company — all for a worthy cause.",
+        "With team registrations, hole sponsorships, and prizes throughout the day, the eventblends friendly competition with genuine community spirit, helping make adifference for local families affected by cancer and serious injury."
+      ],
+      "registerHref": "https://forms.office.com/Pages/ResponsePage.aspx?id=1XPjGSBSd0KXMVDz6pAW0BIWRiZ4Y5VBtR9gnrxHwoNUMjhUQldUS1ZHMTJXVTZYME5CNldJVjhJNi4u",
+      "raffle": {
+        "image": "/assets/TRG-Raffle-Raffle-Tix-1200-x-627-px-a071cd.webp",
+        "heading": "TRG 2026 Charity Golf Day Major Prize",
+        "body": "The Toowoomba Referral Group is hosting its charity golf day again in November 2026. Participants will have the chance to win a major cash prize of $5,000. Tickets are only $10 each.",
+        "cta": {
+          "label": "Buy Your Tickets Here",
+          "href": "https://www.raffletix.com.au/?ref=3dv5w&sref=9dxr33fa"
+        }
+      },
+      "sponsorships": [
+        "Hole in One Sponsor",
+        "Minor Sponsorship (Donation)",
+        "Major Sponsorship (Donation)",
+        "Raffle/Auction Prize (Donation)",
+        "All other sponsorship opportunities are currently exhausted"
+      ],
+      "event": {
+        "heading": "2026 Golf Day",
+        "date": "Friday 27th November",
+        "venue": "TOOWOOMBA GOLF CLUB",
+        "address": "235-323 Rowbotham St, Middle Ridge",
+        "registration": "Registration 8:00am",
+        "teeOff": "Tee Off 9:00am"
+      },
+      "charities": [
+        {
+          "name": "Hope Horizons",
+          "image": "/assets/hope-horizons-logo-600px-mh2w6u2e-b27d50.webp",
+          "body": "Hope Horizons Cancer Wellness Centre opened its doors in Toowoomba, Southeast Queensland in 2017. Born from a desire to see free allied health services provided for those living with cancer in the region, while ever cancer remains, our mission is to diminish its impact.",
+          "href": "https://www.hopehorizons.com.au/"
+        },
+        {
+          "name": "Maddox's Helping Hand",
+          "image": "/assets/Maddox-logo-mh2wfh53-d4b620.webp",
+          "body": "Maddox's Helping Hand Foundation (MHHF) was established in 2020 and supports ACCISS where the public hospital system cannot. In May 2021 MHHF held its first fundraising event and has since raised almost $700,000.",
+          "href": "https://maddoxshelpinghandfoundation.com.au/"
+        }
+      ],
+      "sponsors": {
+        "major": [
+          "Tilly’s",
+          "Briese Lawyers",
+          "Smith Diesel Fitting",
+          "Regional Insurance Brokers",
+          "H & H Catering",
+          "Southern Cross Austereo"
+        ],
+        "hole": [
+          "HC Pure",
+          "Clearvision Accountancy",
+          "Andersons Toowoomba",
+          "DP Wealth Advisory",
+          "Ada Financial",
+          "Cornerstone Risk Group",
+          "Liebke Tyres",
+          "Alliance Building & Construction",
+          "Sunrise Surveying",
+          "LJ Hooker Toowoomba",
+          "The Gentleman’s Barber",
+          "X Golf Toowoomba",
+          "WD Building Design",
+          "Australian Ecological Restoration Services",
+          "Clearspan Building Solutions",
+          "Toowoomba Body Corporate Managers & Consultants",
+          "Blackbird Projects",
+          "Superior Plumbing & Civil"
+        ],
+        "other": [
+          "Ashley North – Colliers Toowoomba",
+          "Westside Timbers",
+          "JLL",
+          "Precinct Urban Planning",
+          "Working Websites",
+          "Sunpork",
+          "Ground Me Coffee"
+        ]
+      },
+      "pastCharities": [
+        {
+          "src": "/assets/Blush-Cancer-Care-9af64f.webp",
+          "alt": "Blush Cancer Care"
+        },
+        {
+          "src": "/assets/young-veterans-78b0e7.webp",
+          "alt": "Young Veterans"
+        }
+      ],
+      "galleries": {
+        "2024": [
+          "/assets/2024-TRG-Golf-Day-d9d86e.webp",
+          "/assets/2024-TRG-Golf-Day-728177.webp",
+          "/assets/2024-TRG-Golf-Day-e3332e.webp",
+          "/assets/2024-TRG-Golf-Day-499a69.webp",
+          "/assets/2024-TRG-Golf-Day-84891b.webp",
+          "/assets/2024-TRG-Golf-Day-ec5c6e.webp",
+          "/assets/2024-TRG-Golf-Day-e29f5e.webp"
+        ],
+        "2025": [
+          "/assets/IMG_0799-b0ce94.webp",
+          "/assets/IMG_0725-9c82b4.webp",
+          "/assets/IMG_0729-7da0a1.webp",
+          "/assets/IMG_0743-924540.webp",
+          "/assets/IMG_0775-ae2ca1.webp",
+          "/assets/IMG_0916-97ec06.webp",
+          "/assets/IMG_0891-70321d.webp",
+          "/assets/IMG_0977-dfaef3.webp"
+        ]
+      },
+      "images": [
+        {
+          "src": "/assets/golf-day-page-banner-full.webp",
+          "alt": "TRG Annual Charity Golf Day"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "TRG Annual Golf Day"
+        },
+        {
+          "type": "paragraph",
+          "text": "The TRG Charity Golf Day is an annual community event hosted by the Toowoomba Referral Group to raise funds for two local charities."
+        },
+        {
+          "type": "image",
+          "src": "/assets/golf-day-page-banner-full.webp",
+          "alt": "TRG Annual Charity Golf Day"
+        }
+      ]
+    },
+    "/members": {
+      "kind": "members",
+      "heading": "TRG Member List",
+      "seo": {
+        "title": "TRG Members List",
+        "description": "Meet the Toowoomba Referral Group members."
+      },
+      "groups": [
+        {
+          "name": "Members",
+          "items": [
+            {
+              "title": "Ada Financial",
+              "href": "/ada-financial",
+              "image": "/assets/Ada-Financial-mu6pk58d-0f1b52.webp",
+              "category": "Mortgage and Finance Broking"
+            },
+            {
+              "title": "Ageloc",
+              "href": "/ageloc",
+              "image": "/assets/Ageloc-Beauty-and-Wellness-mu6pk4z5-67b196.webp",
+              "category": "Beauty and Wellness"
+            },
+            {
+              "title": "Andersens Toowoomba",
+              "href": "/andersens-toowoomba",
+              "image": "/assets/Andersens-Floor-and-Window-Coverings-toowoomba-mu6pjz01-b22d88.jpg",
+              "category": "Floor and Window Coverings"
+            },
+            {
+              "title": "Briese Lawyers",
+              "href": "/briese-lawyers",
+              "image": "/assets/Briese-Lawyers-toowoomba-mu6pk20v-958bcb.png",
+              "category": "Legal Services"
+            },
+            {
+              "title": "Bright Arc Electrical",
+              "href": "/bright-arc-electrical",
+              "image": "/assets/Bright-Arc-Electrical-Toowoomba-mu6pk5kg-8ef6d7.jpg",
+              "category": "Electrician"
+            },
+            {
+              "title": "Clear Vision Accountancy Group",
+              "href": "/clear-vision-accountancy-group",
+              "image": "/assets/Clear-Vision-Accountancy-Group-Toowoomba-mu6pk01l-5172a2.webp",
+              "category": "Tax Accountants"
+            },
+            {
+              "title": "Colliers International Residential Sales Toowoomba",
+              "href": "/colliers-international-residential-sales-in-toowoomba",
+              "image": "/assets/Colliers-International-Toowoomba-mu6pjzju-39acf1.png",
+              "category": "Real Estate Agents"
+            },
+            {
+              "title": "Darling Downs Bookkeeping Company",
+              "href": "/darling-downs-bookkeeping-company",
+              "image": "/assets/Darling-Downs-Bookkeeping-Company-mu6pk3vg-969165.jpg",
+              "category": "Bookkeeping and BAS Agent"
+            },
+            {
+              "title": "Downs Onsite Hydraulics",
+              "href": "/downs-onsite-hydraulics",
+              "image": "/assets/Downs-Onsite-Hydraulics-mu6pk3fx-fec1f7.webp",
+              "category": "Service - Repair - Installation of Hydraulic Components"
+            },
+            {
+              "title": "DP Wealth Advisory",
+              "href": "/dp-wealth-advisory",
+              "image": "/assets/DP-Wealth-Advisory-Toowoomba-mu6pk15v-be4948.jpg",
+              "category": "Financial Planning and Investment Advisers"
+            },
+            {
+              "title": "Frontier Computing",
+              "href": "/frontier-computing",
+              "image": "/assets/Frontier-Computing-Toowoomba-mu6pk29q-3e28d4.jpg",
+              "category": "Computer and IT Services"
+            },
+            {
+              "title": "FX Technologies Toowoomba",
+              "href": "/fx-technologies-toowoomba",
+              "image": "/assets/FX-Technologies-Toowoomba-mu6pk1d0-2bd1dc.png",
+              "category": "Office Equipment and Phone Systems"
+            },
+            {
+              "title": "Grace Information",
+              "href": "/grace-information",
+              "image": "/assets/Grace-Information-mu6pk2y7-4aaeea.jpg",
+              "category": "Document Lifecycle Management"
+            },
+            {
+              "title": "HC Pure",
+              "href": "/hc-pure",
+              "image": "/assets/HCP-Pure-Toowoomba-mu6pk0c1-ef1a44.png",
+              "category": "Domestic Water Filtration"
+            },
+            {
+              "title": "Krazy Kevin DJ and MC",
+              "href": "/krazy-kevin-dj-and-mc",
+              "image": "/assets/Krazy-Kevin-DJ-Toowoomba-mu6pk0ln-895fad.jpg",
+              "category": "DJ for hire and radio show host for all your entertainment needs!"
+            },
+            {
+              "title": "LJ Hooker Commercial",
+              "href": "/lj-hooker-commercial",
+              "image": "/assets/LJ-Hooker-Commercial-Toowoomba-mu6pjz99-807d45.webp",
+              "category": "Real Estate Agents"
+            },
+            {
+              "title": "Nail Your Content",
+              "href": "/nail-your-content",
+              "image": "/assets/Nail-Your-Content-mu6pjxs2-1d9ba6.webp",
+              "category": "Social Media Management"
+            },
+            {
+              "title": "NorthPrint",
+              "href": "/northprint",
+              "image": "/assets/Northprint-Toowoomba-mu6pjzt3-d17b3e.png",
+              "category": "Custom quality uniforms and promotional merch."
+            },
+            {
+              "title": "Powers Smash Repairs ",
+              "href": "/powers-smash-repairs",
+              "image": "/assets/Powers-Smash-Repairs-Toowoomba-mu6pk2kk-a2f20b.webp",
+              "category": "We'll look after you"
+            },
+            {
+              "title": "Precinct Urban Planning",
+              "href": "/precinct-urban-planning",
+              "image": "/assets/Darling-Downs-Bookkeeping-Company-mu6pk47u-e85386.png",
+              "category": "Town Planning Consultancy"
+            },
+            {
+              "title": "Preventative Property Care",
+              "href": "/preventative-property-care",
+              "image": "/assets/Preventative-Property-Maintenance-mu6pk4gv-62f06a.webp",
+              "category": "Property Maintenance and Prevention"
+            },
+            {
+              "title": "Pure Eco Clean",
+              "href": "/pure-eco-clean",
+              "image": "/assets/Pure-Eco-Clean-Toowoomba-mu6pjxgq-de7d0c.png",
+              "category": "Cleaning services for your home and business"
+            },
+            {
+              "title": "Regional Insurance Brokers",
+              "href": "/regional-insurance-brokers",
+              "image": "/assets/Regional-Insurance-Brokers-Toowoomba-mu6pjypk-286df4.jpg",
+              "category": "General Insurance"
+            },
+            {
+              "title": "Smith Diesel Fitting Pty Ltd",
+              "href": "/smith-diesel-fitting-pty-ltd",
+              "image": "/assets/Smith-Diesel-Fitting-mu6pjy1j-ff5815.webp",
+              "category": "Mobile Diesel Fitting"
+            },
+            {
+              "title": "Working Websites",
+              "href": "/working-websites",
+              "image": "/assets/Working-Websites-Toowoomba-mu6pk1rq-79db54.png",
+              "category": "Website Design and Hosting"
+            },
+            {
+              "title": "Your Events Group",
+              "href": "/your-events-group",
+              "image": "/assets/Your-Events-Group-Toowoomba-mu6pjyeb-7d587e.png",
+              "category": "Unforgettable Events"
+            }
+          ]
+        }
+      ]
+    },
+    "/news": {
+      "kind": "news",
+      "heading": "TRG News",
+      "seo": {
+        "title": "Toowoomba Business Referral Group News",
+        "description": "News from Toowoomba Referral Group."
+      },
+      "posts": [
+        {
+          "title": "What a Day! TRG Charity Golf Day 2025 Wrap-Up",
+          "href": "/what-a-day!-trg-charity-golf-day-2025-wrap-up",
+          "image": "/assets/TRG-Charity-Golf-Day-2025-mu6pc7e0-387d08.webp",
+          "date": "19 January 2026",
+          "excerpt": "If you’ve ever heard whispers that the Toowoomba Referral Group Charity Golf Day is something special, consider this your confirmation.",
+          "featured": true
+        },
+        {
+          "title": "TRG Guest: Jesse McCartney from Belong in Hockey",
+          "href": "/trg-guest-jesse-mccartney-from-belong-in-hockey",
+          "image": "/assets/Belong-in-Hockey-Toowoomba-mu6pcbge-90c27d.webp",
+          "date": "02 May 2026",
+          "excerpt": "Belong in Hockey. Sport, Community, and a Whole Lot of Heart\nWe were delighted to welcome Jessie McCartney to our Wednesday morning meeting to share the story behind Belong in",
+          "featured": false
+        },
+        {
+          "title": "TRG GUEST: Jules from Hope for Our Children",
+          "href": "/trg-guest-jules-from-hope-for-our-children",
+          "image": "/assets/Jules-from-Hope-for-Our-Children-mu6pcbzq-d1465e.jpeg",
+          "date": "02 May 2026",
+          "excerpt": "A morning that pulled at our heartstrings \nWe were so honoured to have Jules Davey, CEO of Hope for Our Children, join us for a cuppa and a chat at",
+          "featured": false
+        },
+        {
+          "title": "Toowoomba’s Own Kevin Howarth Rings Out Success at the Australian Town Crier Championships",
+          "href": "/toowoomba’s-own-kevin-howarth-rings-out-success-at-the-australian-town-crier-championships",
+          "image": "/assets/Toowoomba-wins-big-at-the-2025-National-Town-Crier-Awards-mu6pc8ex-97b001.webp",
+          "date": "31 October 2025",
+          "excerpt": "Toowoomba’s very own Town Crier and valued Toowoomba Referral Group (TRG) member, Kevin Howarth, has once again proven that passion and pride go hand in hand — and that his",
+          "featured": false
+        },
+        {
+          "title": "TRG & Unlocked Finance Raise $500 for Toowoomba Hospice",
+          "href": "/trg--unlocked-finance-raise-500-for-toowoomba-hospice",
+          "image": "/assets/Krazy-Kevin-mu6pc72v-60e368.jpg",
+          "date": "09 June 2021",
+          "excerpt": "Recently TRG proudly donated $500.00 to assist Sam Benz from Unlocked Finance raise funds for Toowoomba Hospice at their annual \"Hang ya boss out to dry\" event! Pictured here is",
+          "featured": false
+        },
+        {
+          "title": "Krazy Kevin goes to Gatton!",
+          "href": "/krazy-kevin-goes-to-gatton!",
+          "image": "/assets/Krazy-Kevin-mu6pc6nl-0a6413.jpg",
+          "date": "17 May 2021",
+          "excerpt": "The TRG Paparazzi caught one of it's more colourful members Krazy Kevin and Geoff Roberts from Power FM Radio Toowoomba broadcasting from Gatton last week!\nContact Krazy Kevin and ask",
+          "featured": false
+        }
+      ]
+    },
+    "/contact": {
+      "kind": "contact",
+      "heading": "Contact TRG",
+      "seo": {
+        "title": "Contact | Toowoomba Business Referral Group",
+        "description": "Contact the Toowoomba Referral Group committee."
+      },
+      "contacts": [
+        {
+          "role": "President",
+          "name": "Jye Berghofer",
+          "phone": "0424 260 539"
+        },
+        {
+          "role": "Co Vice President",
+          "note": "(All Charity Golf Day Enquiries)",
+          "name": "James Williams",
+          "phone": "0481 127 412"
+        },
+        {
+          "role": "Co Vice President",
+          "name": "Justin Searle",
+          "phone": "07 4688 2500"
+        },
+        {
+          "role": "Secretary",
+          "name": "Kellie Thomas",
+          "phone": "0409 347 543"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Vicki Holmes",
+          "phone": "0448 833 550"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Committee Contacts"
+        },
+        {
+          "type": "paragraph",
+          "text": "President Jye Berghofer — 0424 260 539"
+        }
+      ]
+    }
+  }
 }

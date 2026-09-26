@@ -1,22 +1,83 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import MemberPage from "../components/pages/MemberPage.astro";
+import AboutPage from "../components/pages/AboutPage.astro";
 import ArticlePage from "../components/pages/ArticlePage.astro";
-import { pages } from "../lib/cms";
+import CommunityPage from "../components/pages/CommunityPage.astro";
+import ContactPage from "../components/pages/ContactPage.astro";
+import GolfPage from "../components/pages/GolfPage.astro";
+import MemberPage from "../components/pages/MemberPage.astro";
+import MembersPage from "../components/pages/MembersPage.astro";
+import NewsPage from "../components/pages/NewsPage.astro";
+import { cms, memberToPage, articleToPage, type PageKind } from "../lib/cms";
 
 export function getStaticPaths() {
-  return Object.entries(pages)
-    .filter(([, page]) => page.type === "product" || page.type === "blog-post")
-    .map(([path, page]) => ({
-      params: { slug: path.replace(/^\//, "") },
-      props: { page }
-    }));
+  const routes: {
+    params: { slug: string };
+    props: { slug: string; kind: PageKind; title: string; page: Record<string, unknown> };
+  }[] = [];
+
+  for (const [path, page] of Object.entries(cms.pageContent)) {
+    if (path === "/") continue;
+    const slug = path.replace(/^\//, "");
+    routes.push({
+      params: { slug },
+      props: {
+        slug,
+        kind: page.kind as PageKind,
+        title: page.seo?.title ?? page.heading ?? slug,
+        page,
+      },
+    });
+  }
+
+  for (const member of cms.members) {
+    const slug = member.path.replace(/^\//, "");
+    routes.push({
+      params: { slug },
+      props: {
+        slug,
+        kind: "member",
+        title: member.title,
+        page: memberToPage(member),
+      },
+    });
+  }
+
+  for (const article of cms.articles) {
+    const slug = article.path.replace(/^\//, "");
+    routes.push({
+      params: { slug },
+      props: {
+        slug,
+        kind: "article",
+        title: article.title,
+        page: articleToPage(article),
+      },
+    });
+  }
+
+  return routes;
 }
 
-const { page } = Astro.props;
+const { kind, page } = Astro.props as {
+  slug: string;
+  kind: PageKind;
+  title: string;
+  page: Record<string, unknown>;
+};
+
+const seo = page.seo as { title: string; description?: string };
+const pageTitleKinds: PageKind[] = ["golf", "members", "news", "contact"];
+const pageTitle = pageTitleKinds.includes(kind) ? (page.heading as string) : undefined;
 ---
 
-<BaseLayout title={page.seo.title} description={page.seo.description}>
-  {page.type === "product" && <MemberPage page={page} />}
-  {page.type === "blog-post" && <ArticlePage page={page} />}
+<BaseLayout title={seo.title} description={seo.description} pageTitle={pageTitle}>
+  {kind === "about" && <AboutPage page={page} />}
+  {kind === "community" && <CommunityPage page={page} />}
+  {kind === "golf" && <GolfPage page={page} />}
+  {kind === "members" && <MembersPage page={page} />}
+  {kind === "news" && <NewsPage page={page} />}
+  {kind === "contact" && <ContactPage page={page} />}
+  {kind === "member" && <MemberPage page={page} />}
+  {kind === "article" && <ArticlePage page={page} />}
 </BaseLayout>
