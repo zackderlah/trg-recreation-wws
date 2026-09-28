@@ -2,25 +2,29 @@
 const { page } = Astro.props;
 ---
 
-<section class="grid bg-white text-navy lg:grid-cols-2">
-  <div class="px-6 py-10 md:px-12">
+<section class="bg-sky/40 px-4 py-6 text-center">
+  <h1 class="text-4xl text-navy md:text-5xl">Contact T<span class="text-coral">R</span>G</h1>
+</section>
+
+<section class="flex flex-col bg-white text-navy lg:flex-row">
+  <div class="flex-1 px-6 py-10 md:px-12">
     <h2 class="text-3xl text-navy">Committee Contacts</h2>
     <div class="mt-8 space-y-6">
       {
-        page.contacts.map((person: { role: string; note?: string; name: string; phone: string }) => (
+        page.contacts.map((person: { role: string; note?: string; name: string; phone: string; phoneHref: string }) => (
           <article>
             <h3 class="text-xl">{person.role}</h3>
             {person.note && <p class="text-sm">{person.note}</p>}
             <p class="mt-2">{person.name}</p>
             <p>
-              Phone: <a class="text-sky-600 underline" href={`tel:${person.phone.replace(/\s/g, "")}`}>{person.phone}</a>
+              Phone: <a class="text-sky-600 underline" href={person.phoneHref}>{person.phone}</a>
             </p>
           </article>
         ))
       }
     </div>
   </div>
-  <div class="bg-white px-6 py-10 text-navy md:px-12">
+  <div class="flex-1 bg-white px-6 py-10 text-navy md:px-12">
     <h2 class="text-3xl text-navy">Email Us</h2>
     <form class="mt-6 space-y-4" method="post" action="/contact">
       <label class="block text-sm">Business Name*

@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutPage from "../components/pages/AboutPage.astro";
+import { cms } from "../lib/cms";
+
+const page = cms.pageContent["/about"];
+---
+
+<BaseLayout title={page.seo.title} description={page.seo.description}>
+  <AboutPage page={page} />
+</BaseLayout>

@@ -40,7 +40,7 @@ const map = page.map;
   </div>
 </section>
 
-<section class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 md:grid-cols-2">
+<section class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-12 md:flex-row">
   <div class="mx-auto flex w-full max-w-xl flex-col gap-3">
     <img src={raffle.image} alt="Win 5000 cash in the TRG Golf Day Raffle" class="w-full" />
     <img src={raffle.qr} alt="Raffle ticket QR code" class="h-16 w-16 bg-white" />
@@ -54,10 +54,10 @@ const map = page.map;
   </div>
 </section>
 
-<section class="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:grid-cols-3">
+<section class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 md:flex-row">
   {
     page.cards.map((card: { title: string; icon: string; items: string[] }) => (
-      <article class="border border-slate-300 px-5 py-8 text-center">
+      <article class="flex-1 border border-slate-300 px-5 py-8 text-center">
         <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy">
           <img src={card.icon} alt="" class="h-8 w-8" />
         </div>

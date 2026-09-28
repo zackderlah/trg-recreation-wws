@@ -1,28 +1,30 @@
 ---
 const { page } = Astro.props;
-const featured = page.posts.find((item: { featured?: boolean }) => item.featured) || page.posts[0];
-const rest = page.posts.filter((item: { href: string }) => item.href !== featured.href);
 ---
 
-<section class="bg-white px-4 py-10 text-navy">
-  <a href={featured.href} class="mx-auto grid max-w-5xl items-center gap-6 md:grid-cols-[280px_1fr]">
-    {featured.image && <img src={featured.image} alt={featured.title} class="h-48 w-full object-cover" />}
-    <div>
-      <h2 class="text-3xl text-navy">{featured.title}</h2>
-      {featured.date && <p class="mt-2 text-sm">{featured.date}</p>}
-      <p class="mt-3 text-sm leading-6">{featured.excerpt}</p>
-    </div>
-  </a>
+<section class="bg-sky/40 px-4 py-6 text-center">
+  <h1 class="text-4xl text-navy md:text-5xl">T<span class="text-coral">R</span>G News</h1>
 </section>
+
+{page.posts.filter((item: { featured?: boolean }) => item.featured).map((featured: { href: string; image?: string; title: string; date?: string; excerpt?: string }) => (
+  <section class="bg-white px-4 py-10 text-navy">
+    <a href={featured.href} class="mx-auto flex max-w-5xl flex-col items-center gap-6 md:flex-row">
+      {featured.image && <img src={featured.image} alt={featured.title} class="h-48 w-full object-cover md:w-[280px]" />}
+      <div>
+        <h2 class="text-3xl text-navy">{featured.title}</h2>
+        {featured.date && <p class="mt-2 text-sm">{featured.date}</p>}
+        <p class="mt-3 text-sm leading-6">{featured.excerpt}</p>
+      </div>
+    </a>
+  </section>
+))}
 
 <section class="bg-[#f5f5f5] px-4 pb-8 pt-10">
   <h2 class="mx-auto max-w-6xl text-3xl text-navy">More News</h2>
-</section>
-<section class="mx-auto -mt-4 max-w-6xl px-4 pb-10">
-  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="mx-auto mt-6 flex max-w-6xl flex-wrap gap-4">
     {
-      rest.map((item: { href: string; image?: string; title: string }) => (
-        <a href={item.href} class="block bg-blush">
+      page.posts.filter((item: { featured?: boolean }) => !item.featured).map((item: { href: string; image?: string; title: string }) => (
+        <a href={item.href} class="w-full bg-blush sm:w-[47%] lg:w-[23%]">
           {item.image && <img src={item.image} alt={item.title} class="h-36 w-full object-cover" />}
           <div class="px-3 py-4 text-center">
             <h3 class="text-sm font-bold text-navy">{item.title}</h3>

@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticlePage from "../components/pages/ArticlePage.astro";
+import { cms } from "../lib/cms";
+
+const page = cms.pageContent["/trg-guest-jesse-mccartney-from-belong-in-hockey"];
+---
+
+<BaseLayout title={page.seo.title} description={page.seo.description}>
+  <ArticlePage page={page} />
+</BaseLayout>

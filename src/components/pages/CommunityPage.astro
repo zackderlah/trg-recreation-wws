@@ -6,16 +6,18 @@ const { page } = Astro.props;
   <h1 class="text-4xl text-navy md:text-5xl">In the <span class="text-coral">Community</span></h1>
 </section>
 
-<img src={page.hero} alt="TRG supports local community and charity events" class="h-[220px] w-full object-cover object-[center_73%] md:h-[500px]" />
+<section>
+  <img src={page.hero} alt="TRG supports local community and charity events" class="h-[220px] w-full object-cover object-[center_73%] md:h-[500px]" />
+</section>
 
 <section class="bg-white px-4 py-10 text-navy">
   <div class="mx-auto max-w-5xl space-y-8">
     <div>
-    <h2 class="text-3xl text-navy">
-      TRG's Ongoing <span class="text-coral">Support</span> for the Toowoomba Community
-    </h2>
-    <p class="mt-4 leading-relaxed">{page.body[0]}</p>
-    <p class="mt-4 leading-relaxed">{page.body[1]}</p>
+      <h2 class="text-3xl text-navy">
+        TRG's Ongoing <span class="text-coral">Support</span> for the Toowoomba Community
+      </h2>
+      <p class="mt-4 leading-relaxed">{page.body[0]}</p>
+      <p class="mt-4 leading-relaxed">{page.body[1]}</p>
     </div>
     <div>
       <h2 class="text-3xl text-navy">Empowering <span class="text-coral">Local</span> Initiatives and Partnerships</h2>

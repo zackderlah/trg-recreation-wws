@@ -4,21 +4,14 @@ A clean recreation of [trg.org.au](https://trg.org.au/) as an Astro site. This r
 
 ## Working Websites Studio import
 
-**Target mode: Astro + `content.json` (not `pages.json`).**
+WWS reads repo source. It does not run the app. Follow `.cursor/rules/wws-github-import.mdc`.
 
-WWS does not run this app. It reads repo source, inlines Astro components (up to ~6 levels), evaluates `{expressions}` against `src/cms/*.json`, maps Tailwind utilities to the canvas, and resolves images from `public/` via raw GitHub URLs.
-
-- **`src/cms/content.json`** — copy, members, articles, and `pageContent` for static routes (home data lives under `pageContent["/"]` but is rendered from `src/pages/index.astro`).
-- **`src/cms/site.json`** — site name, nav, footer links, logo paths.
-- **No `src/cms/pages.json`** — an incomplete manifest would override Astro routing and break import.
-
-Routing:
-
-- `src/pages/index.astro` — home (`HomePage.astro` + `pageContent["/"]`).
-- `src/pages/[...slug].astro` — `getStaticPaths()` from `pageContent` (about, contact, …), plus every `members[].path` and `articles[].path`.
-- One component per page kind under `src/components/pages/`.
-
-Markup is static HTML in `.astro` templates (header/main/footer, real headings and copy, Tailwind layout utilities). Brand colours are CSS variables in `src/styles/global.css` (`--color-*`).
+- One Astro file per URL under `src/pages/` (home is `index.astro`).
+- Copy and image paths live in `src/cms/content.json` under `pageContent`, keyed by path.
+- `src/cms/site.json` holds name, nav, footer links, and logo.
+- Do not add `src/cms/pages.json` or a `wws/` folder.
+- Templates print `cms.pageContent["/about"]` (and the matching key for that file). Lists use `.map()`.
+- Layout uses `<section>`, real `<img src="/assets/...">` tags, headings, paragraphs, links, and flex. No CSS grid and no JS-only widgets for content that must import.
 
 ## Develop
 

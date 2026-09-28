@@ -16,55 +16,49 @@ const blocks = page.blocks || [];
     }
     <div>
       {page.person && <p class="text-2xl font-bold">{page.person}</p>}
-      <h2 class="text-4xl">{page.heading}</h2>
+      <h1 class="text-4xl">{page.heading}</h1>
       {page.category && <p class="mt-2 text-xl">{page.category}</p>}
     </div>
   </div>
 </section>
 
-<article class="prose-copy bg-white px-4 pb-4 text-navy">
+<section class="prose-copy bg-white px-4 pb-4 text-navy">
   <div class="mx-auto max-w-3xl">
   {
-    blocks.map((block: { type: string; text?: string; items?: string[] }) => {
-      if (block.type === "list") {
-        return (
-          <ul>
-            {(block.items || []).map((item) => (
-              <li class="ml-5 list-disc">{item}</li>
-            ))}
-          </ul>
-        );
-      }
-      if (block.type === "heading") {
-        if (block.level === "h2") return <h2 class="text-2xl">{block.text}</h2>;
-        if (block.level === "h4") return <h4 class="text-lg font-bold">{block.text}</h4>;
-        return <h3>{block.text}</h3>;
-      }
-      return <p>{block.text}</p>;
-    })
+    blocks.map((block: { type: string; text?: string; items?: string[]; level?: string }) => (
+      block.type === "list" ? (
+        <ul>
+          {(block.items || []).map((item) => (
+            <li class="ml-5 list-disc">{item}</li>
+          ))}
+        </ul>
+      ) : block.type === "heading" ? (
+        <h2 class="text-2xl">{block.text}</h2>
+      ) : (
+        <p>{block.text}</p>
+      )
+    ))
   }
   </div>
-</article>
+</section>
 
-<section class="mx-auto grid max-w-4xl gap-8 px-4 py-8 md:grid-cols-2">
-  <div>
+<section class="mx-auto flex max-w-4xl flex-col gap-8 px-4 py-8 md:flex-row">
+  <div class="flex-1">
     <h2 class="text-3xl text-navy">Contact Details</h2>
     {page.logo && <img src={page.logo} alt={`${page.heading} logo`} class="mt-6 max-h-24 object-contain" />}
     <div class="mt-4 space-y-1 text-sky-700">
       {(page.phones || []).map((phone: { label: string; href: string }) => <p><a href={phone.href}>{phone.label}</a></p>)}
       {(page.emails || []).map((email: { label: string; href: string }) => <p><a href={email.href}>{email.label}</a></p>)}
-      {
-        (page.extras || []).map((extra: { text: string; href: string }) => (
-          <p>
-            <a href={extra.href} target={extra.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-              {extra.text}
-            </a>
-          </p>
-        ))
-      }
+      {(page.extras || []).map((extra: { text: string; href: string }) => (
+        <p>
+          <a href={extra.href} target={extra.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+            {extra.text}
+          </a>
+        </p>
+      ))}
     </div>
   </div>
-  <address class="pt-12 not-italic leading-7">
+  <address class="flex-1 pt-12 not-italic leading-7">
     {(page.addressLines || []).map((line: string) => <p>{line}</p>)}
   </address>
 </section>
